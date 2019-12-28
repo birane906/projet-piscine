@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginScreen.FXMLDocumentController">
+   <children>
+      <TextField fx:id="textEmail" layoutX="208.0" layoutY="161.0" />
+      <PasswordField fx:id="textPassword" layoutX="208.0" layoutY="218.0" />
+      <Label layoutX="115.0" layoutY="166.0" text="Email" />
+      <Label layoutX="115.0" layoutY="222.0" text="Password" />
+      <Button layoutX="245.0" layoutY="281.0" mnemonicParsing="false" onAction="#loginAction" text="Connexion" />
+      <Text layoutX="170.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Application TOEIC" wrappingWidth="258.0">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
