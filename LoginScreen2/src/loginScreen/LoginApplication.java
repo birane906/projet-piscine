@@ -13,9 +13,12 @@ public class LoginApplication extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         Scene scene = new Scene(root);
         stage.setTitle("Application TOEIC");
-        //stage.setMaximized(true);
         stage.setScene(scene);
+        stage.setMaximized(true);
+        stage.setResizable(false);
+        //scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
         stage.show();
+        stage.centerOnScreen();
     }
     
     public static void main(String[] args) {

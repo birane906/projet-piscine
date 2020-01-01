@@ -42,7 +42,7 @@ public class FXMLDocumentController implements Initializable {
         String email = textEmail.getText().toString();
         String password = textPassword.getText().toString();
     
-        String sql = "SELECT * FROM utilisateur WHERE mailutilisateur = ? and mdputilisateur = ?";
+        String sql = "SELECT * FROM Utilisateur WHERE MailUtilisateur = ? and MdpUtilisateur = ?";
         
         try{
             preparedStatement = connection.prepareStatement(sql);

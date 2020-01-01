@@ -9,10 +9,10 @@ public class ConnectionUtil {
     {
         try
         {
-            Class.forName("org.postgresql.Driver");
-            String url = "jdbc:postgresql://localhost:5432/piscine";
-            String user = "postgres";
-            String passwd = "motdepasse";
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:mysql://mysql-projetpiscine.alwaysdata.net/projetpiscine_bdd?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC";
+            String user = "197173_tiffany";
+            String passwd = "piscine2019";
             Connection conn = DriverManager.getConnection(url, user, passwd);
             return conn;
         }
