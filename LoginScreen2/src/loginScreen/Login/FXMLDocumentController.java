@@ -1,4 +1,4 @@
-package loginScreen;
+package loginScreen.Login;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -43,6 +43,7 @@ public class FXMLDocumentController implements Initializable {
         String password = textPassword.getText().toString();
     
         String sql = "SELECT * FROM Utilisateur WHERE MailUtilisateur = ? and MdpUtilisateur = ?";
+        String sql2;
         
         try{
             preparedStatement = connection.prepareStatement(sql);
@@ -56,9 +57,17 @@ public class FXMLDocumentController implements Initializable {
                 Node node = (Node)event.getSource();
                 dialogStage = (Stage) node.getScene().getWindow();
                 dialogStage.close();
-                scene = new Scene(FXMLLoader.load(getClass().getResource("FXMLMenu.fxml")));
-                dialogStage.setScene(scene);
-                dialogStage.show();
+                if (resultSet.getInt(6) == 1) {
+                	scene = new Scene(FXMLLoader.load(getClass().getResource("../Prof/FXMLMenu.fxml")));
+                    dialogStage.setScene(scene);
+                    dialogStage.show();
+                }
+                
+                else {
+                	scene = new Scene(FXMLLoader.load(getClass().getResource("../Etudiant/AccueilEtudiantScreen.fxml")));
+                	dialogStage.setScene(scene);
+                	dialogStage.show();
+                }
             }
         }
         catch(Exception e){
