@@ -58,7 +58,7 @@ public class FXMLDocumentController implements Initializable {
                 dialogStage = (Stage) node.getScene().getWindow();
                 dialogStage.close();
                 if (resultSet.getInt(6) == 1) {
-                	scene = new Scene(FXMLLoader.load(getClass().getResource("../Prof/FXMLMenu.fxml")));
+                	scene = new Scene(FXMLLoader.load(getClass().getResource("../Prof/AccueilProfScreen.fxml")));
                     dialogStage.setScene(scene);
                     dialogStage.show();
                 }
