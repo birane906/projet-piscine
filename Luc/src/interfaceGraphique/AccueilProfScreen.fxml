@@ -78,7 +78,7 @@
                         <Insets bottom="50.0" />
                      </VBox.margin>
                   </ImageView>
-                  <Button mnemonicParsing="false" style="-fx-background-color: grey; -fx-border-color: white;" text="Lancer le test programmé" textFill="WHITE">
+                  <Button mnemonicParsing="false" style="-fx-background-color: grey; -fx-border-color: white;" text="Gérer les TOEIC" textFill="WHITE">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
@@ -103,7 +103,7 @@
                         <Insets bottom="50.0" />
                      </VBox.margin>
                   </ImageView>
-                  <Button mnemonicParsing="false" style="-fx-background-color: grey; -fx-border-color: white;" text="Voir les résultats de tests et les statistiques" textFill="WHITE">
+                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="326.0" style="-fx-background-color: grey; -fx-border-color: white;" text="Voir les résultats de tests et les statistiques" textFill="WHITE">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
@@ -125,7 +125,7 @@
                         <Insets bottom="50.0" />
                      </VBox.margin>
                   </ImageView>
-                  <Button mnemonicParsing="false" style="-fx-background-color: grey; -fx-border-color: white;" text="Informations de contact des enseignants" textFill="WHITE">
+                  <Button mnemonicParsing="false" style="-fx-background-color: grey; -fx-border-color: white;" text="Gérer les étudiants" textFill="WHITE">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
@@ -138,7 +138,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
          <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue sur votre espace TOEIC Polytech &lt;prénom&gt;. Ici vous avez la possibilité de voir les TOEIC programmés par vos enseignants, de retrouver vos résultats précédents/votre progression, de trouver les informations de contact de vos enseignants si vous avez des questions." textAlignment="JUSTIFY" wrappingWidth="1040.6708984375">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue sur votre espace TOEIC Polytech &lt;prénom&gt;. Ici, vous avez la possibilité de créer / programmer un TOEIC, gérer les étudiants et voir les résultats / statistiques des tests effectués précedemment." textAlignment="JUSTIFY" wrappingWidth="1040.6708984375">
                <font>
                   <Font size="25.0" />
                </font>
