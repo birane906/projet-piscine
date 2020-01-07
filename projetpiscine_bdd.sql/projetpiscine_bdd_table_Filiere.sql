@@ -15,6 +15,7 @@ CREATE TABLE `Filiere` (
 --
 
 INSERT INTO `Filiere` (`FiliereEtAnnee`) VALUES
+('Enseignant'),
 ('IG 3'),
 ('IG 4'),
 ('IG 5'),

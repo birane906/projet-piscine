@@ -3,10 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql-projetpiscine.alwaysdata.net
--- Generation Time: Jan 01, 2020 at 02:35 PM
+-- Generation Time: Jan 07, 2020 at 09:56 AM
 -- Server version: 10.3.17-MariaDB
 -- PHP Version: 7.2.9
 
+SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;

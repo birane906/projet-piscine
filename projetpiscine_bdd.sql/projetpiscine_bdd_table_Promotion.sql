@@ -15,6 +15,7 @@ CREATE TABLE `Promotion` (
 --
 
 INSERT INTO `Promotion` (`AnneePromo`) VALUES
+(1),
 (2016),
 (2017),
 (2018),
