@@ -65,11 +65,27 @@
       </HBox>
       <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="150.0">
-               <image>
-                  <Image url="@../../../Luc/Login/thumbnail_large.png" />
-               </image>
-            </ImageView>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="258.0" prefWidth="651.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0">
+                     <image>
+                        <Image url="@../../../../../../eclipse-workspace/LoginScreen/Luc/Login/thumbnail_large.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_RIGHT" prefHeight="258.0" prefWidth="653.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="91.0" fitWidth="300.0">
+                     <image>
+                        <Image url="@../../../../../../eclipse-workspace/LoginScreen/Luc/Login/thumbnail_large%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </VBox>
          </children>
       </HBox>
    </children>

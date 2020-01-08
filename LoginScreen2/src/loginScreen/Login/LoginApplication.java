@@ -16,7 +16,7 @@ public class LoginApplication extends Application {
         stage.setScene(scene);
         stage.setMaximized(true);
         stage.setResizable(false);
-        //scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+        //scene.getStylesheets().add(getClass().getResource("../application.css").toExternalForm());
         stage.show();
         stage.centerOnScreen();
     }

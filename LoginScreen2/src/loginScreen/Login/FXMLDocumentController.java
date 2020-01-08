@@ -25,8 +25,11 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private PasswordField textPassword;
     
+    static String email;
+    static String password;
+    
     Stage dialogStage = new Stage();
-    Scene scene;
+    //Scene scene;
     
     Connection connection = null;
     PreparedStatement preparedStatement = null;
@@ -39,11 +42,10 @@ public class FXMLDocumentController implements Initializable {
     
     
     public void loginAction(ActionEvent event){
-        String email = textEmail.getText().toString();
-        String password = textPassword.getText().toString();
+        email = textEmail.getText().toString();
+        password = textPassword.getText().toString();
     
         String sql = "SELECT * FROM Utilisateur WHERE MailUtilisateur = ? and MdpUtilisateur = ?";
-        String sql2;
         
         try{
             preparedStatement = connection.prepareStatement(sql);
@@ -51,21 +53,27 @@ public class FXMLDocumentController implements Initializable {
             preparedStatement.setString(2, password);
             resultSet = preparedStatement.executeQuery();
             if(!resultSet.next()){
-                infoBox("Please enter correct Email and Password", null, "Failed");
+                infoBox("Veuillez entrer un identifiant et une adresse correcte", null, "Failed");
             }else{
-                infoBox("Login Successfull",null,"Success" );
+                infoBox("Connexion effectuée !",null,"Success" );
                 Node node = (Node)event.getSource();
                 dialogStage = (Stage) node.getScene().getWindow();
-                dialogStage.close();
+                //dialogStage.close();
                 if (resultSet.getInt(6) == 1) {
-                	scene = new Scene(FXMLLoader.load(getClass().getResource("../Prof/AccueilProfScreen.fxml")));
-                    dialogStage.setScene(scene);
+                	//scene = new Scene(FXMLLoader.load(getClass().getResource("../Prof/AccueilProfScreen.fxml")));
+                    dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../Prof/AccueilProfScreen.fxml")));
+                    //dialogStage.sizeToScene();
+                    //dialogStage.setMaximized(false);
+                    //dialogStage.setFullScreen(true);
                     dialogStage.show();
                 }
                 
                 else {
-                	scene = new Scene(FXMLLoader.load(getClass().getResource("../Etudiant/AccueilEtudiantScreen.fxml")));
-                	dialogStage.setScene(scene);
+                	//scene = new Scene(FXMLLoader.load(getClass().getResource("../Etudiant/AccueilEtudiantScreen.fxml")));
+                	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../Etudiant/AccueilEtudiantScreen.fxml")));
+                	//dialogStage.sizeToScene();
+                    //dialogStage.setMaximized(false);
+                    //dialogStage.setFullScreen(true);
                 	dialogStage.show();
                 }
             }
@@ -83,6 +91,16 @@ public class FXMLDocumentController implements Initializable {
         alert.setTitle(title);
         alert.setHeaderText(headerText);
         alert.showAndWait();
+    }
+    
+    public static String mail() {
+    	
+    	return email;
+    }
+    
+    public static String mdp() {
+    	
+    	return password;
     }
     
     
