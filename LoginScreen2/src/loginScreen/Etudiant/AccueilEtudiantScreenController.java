@@ -65,7 +65,7 @@ public class AccueilEtudiantScreenController implements Initializable {
 		try {
 			Node node = (Node)event.getSource();
             dialogStage = (Stage) node.getScene().getWindow();
-            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("./DémarrerTOEICScreen.fxml")));
+            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../StatsEtudiant/MesRésultatsEtudiantScreen.fxml")));
 		}
 		catch(Exception e){
             e.printStackTrace();
@@ -76,7 +76,7 @@ public class AccueilEtudiantScreenController implements Initializable {
 		try {
 			Node node = (Node)event.getSource();
             dialogStage = (Stage) node.getScene().getWindow();
-            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("./DémarrerTOEICScreen.fxml")));
+            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("./ContactEnseignant.fxml")));
 		}
 		catch(Exception e){
             e.printStackTrace();
