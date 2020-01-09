@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #0243E9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="176.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="441.0" minHeight="10.0" prefHeight="415.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="282.0" minHeight="10.0" prefHeight="122.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Gérer les étudiants" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="478.0" prefWidth="1180.0" GridPane.rowIndex="1">
+         <children>
+            <VBox alignment="CENTER" prefHeight="417.0" prefWidth="1263.0">
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+               <children>
+                  <GridPane prefHeight="668.0" prefWidth="1080.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="104.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="224.0" minHeight="10.0" prefHeight="174.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <GridPane prefHeight="104.0" prefWidth="898.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="733.0" minWidth="10.0" prefWidth="564.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="184.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="104.0" prefWidth="618.0">
+                                       <children>
+                                          <Label prefHeight="35.0" prefWidth="282.0" text="Rechercher un étudiant" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField alignment="CENTER" prefHeight="31.0" prefWidth="147.0" text="Entrer le nom ici">
+                                             <font>
+                                                <Font name="System Italic" size="15.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                       <children>
+                                          <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
+                                             <graphic>
+                                                <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../Signe%20+/signePlus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="20.0" right="20.0" />
+                                             </padding>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="439.0" prefWidth="1080.0" GridPane.rowIndex="1">
+                           <children>
+                              <TableView prefHeight="224.0" prefWidth="908.0">
+                                <columns>
+                                  <TableColumn prefWidth="180.0" text="Nom" />
+                                    <TableColumn minWidth="0.0" prefWidth="182.0" text="Prénom" />
+                                    <TableColumn prefWidth="127.0" text="Promotion" />
+                                    <TableColumn prefWidth="222.0" text="Nombre de TOEIC effectués" />
+                                    <TableColumn prefWidth="196.0" text="Modifier / Supprimer" />
+                                </columns>
+                              </TableView>
+                              <Slider orientation="VERTICAL" rotate="-180.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+         <GridPane.margin>
+            <Insets left="50.0" right="50.0" />
+         </GridPane.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+            <GridPane prefHeight="202.0" prefWidth="1437.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1209.0" minWidth="10.0" prefWidth="472.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="667.0" minWidth="10.0" prefWidth="498.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="643.0" minWidth="10.0" prefWidth="317.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="37.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: ;">
+                                 <image>
+                                    <Image url="@../../BoutonHome/my-home-button.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+   </children>
+</GridPane>

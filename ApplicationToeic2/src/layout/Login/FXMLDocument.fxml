@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prog.fichiers.Controller.Login.FXMLDocumentController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="265.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="234.0" minHeight="10.0" prefHeight="128.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="282.0" minHeight="10.0" prefHeight="196.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.rowIndex="1">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="108.0" prefWidth="135.0" spacing="50.0">
+               <children>
+                  <Label text="E Mail" textFill="#fffbfb">
+                     <VBox.margin>
+                        <Insets right="40.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Mot de Passe" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="123.0" prefWidth="248.0" spacing="38.0">
+               <children>
+                  <TextField fx:id="textEmail" />
+                  <PasswordField fx:id="textPassword" />
+                  <Button mnemonicParsing="false" onAction="#loginAction" text="Connexion">
+                     <VBox.margin>
+                        <Insets left="77.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <GridPane.margin>
+            <Insets right="160.0" />
+         </GridPane.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="TOEIC Polytech" textFill="WHITE">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="258.0" prefWidth="651.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0">
+                     <image>
+                        <Image url="@../../images/Commun/logoUM.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_RIGHT" prefHeight="258.0" prefWidth="653.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="91.0" fitWidth="300.0">
+                     <image>
+                        <Image url="@../../images/Commun/poly.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</GridPane>
