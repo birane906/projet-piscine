@@ -1,4 +1,4 @@
-package loginScreen.Prof;
+package java.fichiers.Controller.Enseignant;
 
 import java.net.URL;
 import java.util.ResourceBundle;

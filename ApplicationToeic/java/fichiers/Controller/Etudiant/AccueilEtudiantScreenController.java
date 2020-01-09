@@ -1,5 +1,6 @@
-package loginScreen.Etudiant;
+package java.fichiers.Controller.Etudiant;
 
+//import de fichier java
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.net.URL;
@@ -11,8 +12,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.stage.Stage;
-import loginScreen.Login.ConnectionUtil;
-import loginScreen.Login.FXMLDocumentController;
+
+//import interne a l application
+import java.fichiers.Config.ConnectionUtil;
+import java.fichiers.Controller.Login.FXMLDocumentController;
 
 public class AccueilEtudiantScreenController implements Initializable {
 	

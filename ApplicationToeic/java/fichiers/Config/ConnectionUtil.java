@@ -1,4 +1,5 @@
-package loginScreen.Login;
+package java.fichiers.Config;
+
 import java.sql.*;
 import javax.swing.*;
 
