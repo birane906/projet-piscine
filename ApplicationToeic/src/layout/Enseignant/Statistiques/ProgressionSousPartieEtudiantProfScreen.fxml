@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
@@ -17,50 +18,37 @@
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="176.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="367.0" minHeight="10.0" prefHeight="328.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="415.0" minHeight="10.0" prefHeight="415.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="282.0" minHeight="10.0" prefHeight="196.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <GridPane alignment="CENTER" prefHeight="132.0" prefWidth="1280.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="793.0" minWidth="10.0" prefWidth="793.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="635.0" minWidth="10.0" prefWidth="487.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
          <children>
-            <Label text="Fin du TOEIC" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="50.0" />
-               </font>
-            </Label>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
-         <children>
-            <VBox prefHeight="200.0" prefWidth="100.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Félicitations !  Vous venez de terminer ce TOEIC, votre score total est de xxx/975." textAlignment="JUSTIFY" wrappingWidth="1077.6708984375">
+                  <Label text="Progression par sous-partie" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font size="30.0" />
+                        <Font name="System Bold" size="50.0" />
                      </font>
-                  </Text>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Si vous le souhaitez, vous pouvez consulter le détail de vos réponses ainsi que votre score par parties en cliquant sur &quot;voir détails&quot; sinon vous pouvez retourner à l'accueil afin de vous déconnecter. " textAlignment="JUSTIFY" wrappingWidth="1077.6708984375">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="40.0" />
-                     </VBox.margin>
-                  </Text>
+                  </Label>
                </children>
-               <HBox.margin>
-                  <Insets top="40.0" />
-               </HBox.margin>
-            </VBox>
+            </HBox>
          </children>
-      </HBox>
+      </GridPane>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
          <children>
             <GridPane prefHeight="202.0" prefWidth="1437.0">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1209.0" minWidth="10.0" prefWidth="319.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="667.0" minWidth="10.0" prefWidth="667.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1209.0" minWidth="10.0" prefWidth="472.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="667.0" minWidth="10.0" prefWidth="498.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="643.0" minWidth="10.0" prefWidth="317.0" />
               </columnConstraints>
               <rowConstraints>
@@ -69,13 +57,12 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="188.0" style="-fx-background-color: #ff961e; -fx-border-color: white;" text="Voir détails" textFill="WHITE">
+                        <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="395.0" style="-fx-background-color: ff961e; -fx-border-color: white;" text="Revenir à la page des résultats" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>
                         </Button>
-                     </children>
-                  </HBox>
+                     </children></HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                      <children>
                         <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="37.0" style="-fx-background-color: transparent;">
@@ -93,5 +80,26 @@
             </GridPane>
          </children>
       </HBox>
+      <GridPane GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="163.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="283.0" minHeight="10.0" prefHeight="282.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="283.0" prefWidth="1120.0" GridPane.rowIndex="1" />
+            <HBox alignment="CENTER" prefHeight="133.0" prefWidth="1280.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous pouvez, ici, observer la progression de l'étudiant &lt;Y&gt; sur les différentes sous-parties :" wrappingWidth="820.40673828125">
+                     <font>
+                        <Font name="System Italic" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
    </children>
 </GridPane>

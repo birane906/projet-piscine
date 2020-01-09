@@ -72,7 +72,7 @@
                <children>
                   <ImageView fitHeight="190.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../Luc/AccueilEtudiant/icon-cahier.png" />
+                        <Image url="@../../images/Etudiant/AccueilEtudiant/icon-cahier.png" />
                      </image>
                      <VBox.margin>
                         <Insets bottom="50.0" />
@@ -119,7 +119,7 @@
                <children>
                   <ImageView fitHeight="190.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../Luc/AccueilEtudiant/Contacts_logo.png" />
+                        <Image url="@../../images/Etudiant/AccueilEtudiant/contacts_logo.png" />
                      </image>
                      <VBox.margin>
                         <Insets bottom="50.0" />
