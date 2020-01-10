@@ -1,4 +1,4 @@
-package piscine;
+package java.fichiers.Class;
 import java.time.LocalDate;
 
 public class TOEIC {
@@ -12,19 +12,19 @@ public class TOEIC {
 //getters et setters
 	
 	public int getNumTOEIC(){
-		return numTOEIC;
+		return NumTOEIC;
 	}
 
 	public void setNumTOEIC(int numTOEIC) {
-		this.numTOEIC = numTOEIC;
+		this.NumTOEIC = numTOEIC;
 	}
 
 	public String getLibelleTOEIC() {
-		return libelleTOEIC;
+		return LibelleTOEIC;
 	}
 
 	public void setLibelleTOEIC(String libelleTOEIC) {
-		this.libelleTOEIC = libelleTOEIC;
+		this.LibelleTOEIC = libelleTOEIC;
 	}
 	
 	public int getEnseignant(){
@@ -37,8 +37,8 @@ public class TOEIC {
 	
 //constructeur Toeic	
 	public TOEIC(int numTOEIC,String libelleTOEIC, int idEnseignant) {
-		this.numTOEIC= numTOEIC;
-		this.libelleTOEIC= libelleTOEIC;
+		this.NumTOEIC= numTOEIC;
+		this.LibelleTOEIC= libelleTOEIC;
 		this.Enseignant=idEnseignant; 
 	}
 

@@ -33,7 +33,7 @@ public class AccueilEtudiantScreenController implements Initializable {
 		try {
 			Node node = (Node)event.getSource();
             dialogStage = (Stage) node.getScene().getWindow();
-            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../Login/FXMLDocument.fxml")));
+            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Login/FXMLDocument.fxml")));
 		}
 		catch(Exception e){
             e.printStackTrace();
@@ -51,12 +51,12 @@ public class AccueilEtudiantScreenController implements Initializable {
             if(resultSet.next()){
             	Node node = (Node)event.getSource();
             	dialogStage = (Stage) node.getScene().getWindow();
-            	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("./DémarrerTOEICScreen.fxml")));
+            	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/Toeic/DémarrerTOEICScreen.fxml")));
             }
             else {
             	Node node = (Node)event.getSource();
             	dialogStage = (Stage) node.getScene().getWindow();
-            	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("./PasDeTOEICProgScreen.fxml")));
+            	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/Toeic/PasDeTOEICProgScreen.fxml")));
             }
 		}
 		catch(Exception e){
@@ -68,7 +68,7 @@ public class AccueilEtudiantScreenController implements Initializable {
 		try {
 			Node node = (Node)event.getSource();
             dialogStage = (Stage) node.getScene().getWindow();
-            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../StatsEtudiant/MesRésultatsEtudiantScreen.fxml")));
+            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/Statistiques/MesRésultatsEtudiantScreen.fxml")));
 		}
 		catch(Exception e){
             e.printStackTrace();
@@ -79,7 +79,7 @@ public class AccueilEtudiantScreenController implements Initializable {
 		try {
 			Node node = (Node)event.getSource();
             dialogStage = (Stage) node.getScene().getWindow();
-            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("./ContactEnseignant.fxml")));
+            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/InfosEnseignants/ContactEnseignant.fxml")));
 		}
 		catch(Exception e){
             e.printStackTrace();
