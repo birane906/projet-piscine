@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="234.0" minHeight="10.0" prefHeight="107.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="488.0" minHeight="10.0" prefHeight="434.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="555.0" minHeight="10.0" prefHeight="179.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Oral Part - Subpart 2" textFill="WHITE">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <content>
+            <HBox alignment="CENTER" prefHeight="431.0" prefWidth="1278.0" style="-fx-background-color: #1D47B4;">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="431.0" prefWidth="162.0" spacing="20.0">
+                     <children>
+                        <Label text="Question 8" />
+                        <Label text="Question 9" />
+                        <Label text="Question 10" />
+                        <Label text="Question 11" />
+                        <Label text="Question 12" />
+                        <Label text="Question 13" />
+                        <Label text="Question 14" />
+                        <Label text="Question 15" />
+                        <Label text="Question 16" />
+                        <Label text="Question 17" />
+                        <Label text="Question 18" />
+                        <Label text="Question 19" />
+                        <Label text="Question 20" />
+                        <Label text="Question 21" />
+                        <Label text="Question 22" />
+                        <Label text="Question 23" />
+                        <Label text="Question 24" />
+                        <Label text="Question 25" />
+                        <Label text="Question 26" />
+                        <Label text="Question 27" />
+                        <Label text="Question 28" />
+                        <Label text="Question 29" />
+                        <Label text="Question 30" />
+                        <Label text="Question 31" />
+                        <Label text="Question 32" />
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="40.0" top="40.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A" />
+                        
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="40.0" top="40.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <padding>
+                        <Insets bottom="40.0" top="40.0" />
+                     </padding>
+                     <children>
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <padding>
+                        <Insets bottom="40.0" top="40.0" />
+                     </padding>
+                     <children>
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <padding>
+                        <Insets bottom="40.0" top="40.0" />
+                     </padding>
+                     <children>
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </content>
+         <GridPane.margin>
+            <Insets left="150.0" right="150.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </ScrollPane>
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="50.0" left="50.0" right="50.0" />
+         </GridPane.margin>
+         <children>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="129.0" prefWidth="593.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" text="Back to the previous subpart" />
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_RIGHT" prefHeight="129.0" prefWidth="604.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" text="Go to the next subpart" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@application.css" />
+      <URL value="@../application.css" />
+   </stylesheets>
+</GridPane>
