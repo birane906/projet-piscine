@@ -34,7 +34,7 @@ public class Questionnaire5Controller implements Initializable {
 	@FXML
     private void initialize() {
 		Thread thread = new Thread(new Timer());
-		Timer.setText(thread.run());
+		Timer.textProperty().bind(thread.run());
 	}
 	
 	@Override
