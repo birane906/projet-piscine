@@ -11,10 +11,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -31,7 +29,7 @@ public class FXMLDocumentController implements Initializable {
     static String password;
     
     Stage dialogStage = new Stage();
-    Scene scene;
+    //Scene scene;
     
     Connection connection = null;
     PreparedStatement preparedStatement = null;
@@ -60,22 +58,22 @@ public class FXMLDocumentController implements Initializable {
                 infoBox("Connexion effectuée !",null,"Success" );
                 Node node = (Node)event.getSource();
                 dialogStage = (Stage) node.getScene().getWindow();
-                dialogStage.close();
+                //dialogStage.close();
                 if (resultSet.getInt(6) == 1) {
-                	scene = new Scene(FXMLLoader.load(getClass().getResource("../../../../src/layout/Enseignant/AccueilProfScreen.fxml")));
+                	//scene = new Scene(FXMLLoader.load(getClass().getResource("../../../../src/layout/Enseignant/AccueilProfScreen.fxml")));
                     dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Enseignant/AccueilProfScreen.fxml")));
-                    dialogStage.sizeToScene();
-                    dialogStage.setMaximized(false);
-                    dialogStage.setFullScreen(true);
+                    //dialogStage.sizeToScene();
+                    //dialogStage.setMaximized(false);
+                    //dialogStage.setFullScreen(true);
                     dialogStage.show();
                 }
                 
                 else {
-                	scene = new Scene(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/AccueilEtudiantScreen.fxml")));
+                	//scene = new Scene(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/AccueilEtudiantScreen.fxml")));
                 	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/AccueilEtudiantScreen.fxml")));
-                	dialogStage.sizeToScene();
-                    dialogStage.setMaximized(false);
-                    dialogStage.setFullScreen(true);
+                	//dialogStage.sizeToScene();
+                    //dialogStage.setMaximized(false);
+                    //dialogStage.setFullScreen(true);
                 	dialogStage.show();
                 }
             }
