@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.GridPane?>
 
-<GridPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #2D3447;" stylesheets="@../../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #2D3447;" stylesheets="@../../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prog.fichiers.Controller.Etudiant.Questionnaire5Controller">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -21,7 +21,7 @@
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Oral Part - Subpart 3" textFill="WHITE">
+            <Label text="Writing Part - Subpart 5" textFill="WHITE">
                <font>
                   <Font size="31.0" />
                </font>
@@ -37,45 +37,36 @@
                <children>
                   <VBox alignment="TOP_CENTER" prefHeight="431.0" prefWidth="162.0" spacing="20.0">
                      <children>
-                        <Label text="Question 32" />
-                        <Label text="Question 33" />
-                        <Label text="Question 34" />
-                        <Label text="Question 35" />
-                        <Label text="Question 36" />
-                        <Label text="Question 37" />
-                        <Label text="Question 38" />
-                        <Label text="Question 39" />
-                        <Label text="Question 40" />
-                        <Label text="Question 41" />
-                        <Label text="Question 42" />
-                        <Label text="Question 43" />
-                        <Label text="Question 44" />
-                        <Label text="Question 45" />
-                        <Label text="Question 46" />
-                        <Label text="Question 47" />
-                        <Label text="Question 48" />
-                        <Label text="Question 49" />
-                        <Label text="Question 50" />
-                        <Label text="Question 51" />
-                        <Label text="Question 52" />
-                        <Label text="Question 53" />
-                        <Label text="Question 54" />
-                        <Label text="Question 55" />
-                        <Label text="Question 56" />
-                        <Label layoutX="51.0" layoutY="1034.0" text="Question 57" />
-                        <Label layoutX="51.0" layoutY="1075.0" text="Question 58" />
-                        <Label layoutX="51.0" layoutY="1116.0" text="Question 59" />
-                        <Label layoutX="51.0" layoutY="1157.0" text="Question 60" />
-                        <Label layoutX="51.0" layoutY="1198.0" text="Question 61" />
-                        <Label layoutX="51.0" layoutY="1239.0" text="Question 62" />
-                        <Label layoutX="51.0" layoutY="1280.0" text="Question 63" />
-                        <Label layoutX="51.0" layoutY="1321.0" text="Question 64" />
-                        <Label layoutX="51.0" layoutY="1362.0" text="Question 65" />
-                        <Label layoutX="51.0" layoutY="1403.0" text="Question 66" />
-                        <Label layoutX="51.0" layoutY="1444.0" text="Question 67" />
-                        <Label layoutX="51.0" layoutY="1485.0" text="Question 68" />
-                        <Label layoutX="51.0" layoutY="1526.0" text="Question 69" />
-                        <Label layoutX="51.0" layoutY="1567.0" text="Question 70" />
+                        <Label text="Question 101" />
+                        <Label text="Question 102" />
+                        <Label text="Question 103" />
+                        <Label text="Question 104" />
+                        <Label text="Question 105" />
+                        <Label text="Question 106" />
+                        <Label text="Question 107" />
+                        <Label text="Question 108" />
+                        <Label text="Question 109" />
+                        <Label text="Question 110" />
+                        <Label text="Question 111" />
+                        <Label text="Question 112" />
+                        <Label text="Question 113" />
+                        <Label text="Question 114" />
+                        <Label text="Question 115" />
+                        <Label text="Question 116" />
+                        <Label text="Question 117" />
+                        <Label text="Question 118" />
+                        <Label text="Question 119" />
+                        <Label text="Question 120" />
+                        <Label text="Question 121" />
+                        <Label text="Question 122" />
+                        <Label text="Question 123" />
+                        <Label text="Question 124" />
+                        <Label text="Question 125" />
+                        <Label layoutX="51.0" layoutY="1034.0" text="Question 126" />
+                        <Label layoutX="51.0" layoutY="1075.0" text="Question 127" />
+                        <Label layoutX="51.0" layoutY="1116.0" text="Question 128" />
+                        <Label layoutX="51.0" layoutY="1157.0" text="Question 129" />
+                        <Label layoutX="51.0" layoutY="1198.0" text="Question 130" />
                      </children>
                      <HBox.margin>
                         <Insets />
@@ -112,17 +103,8 @@
                         <RadioButton mnemonicParsing="false" text="A" />
                         <RadioButton mnemonicParsing="false" text="A" />
                         <RadioButton layoutX="42.0" layoutY="1034.0" mnemonicParsing="false" text="A" />
-                        <RadioButton layoutX="42.0" layoutY="1075.0" mnemonicParsing="false" text="A" />
                         <RadioButton layoutX="42.0" layoutY="1116.0" mnemonicParsing="false" text="A" />
-                        <RadioButton layoutX="42.0" layoutY="1157.0" mnemonicParsing="false" text="A" />
-                        <RadioButton layoutX="42.0" layoutY="1198.0" mnemonicParsing="false" text="A" />
-                        <RadioButton layoutX="42.0" layoutY="1239.0" mnemonicParsing="false" text="A" />
-                        <RadioButton layoutX="42.0" layoutY="1280.0" mnemonicParsing="false" text="A" />
-                        <RadioButton layoutX="42.0" layoutY="1321.0" mnemonicParsing="false" text="A" />
-                        <RadioButton layoutX="42.0" layoutY="1362.0" mnemonicParsing="false" text="A" />
-                        <RadioButton layoutX="42.0" layoutY="1403.0" mnemonicParsing="false" text="A" />
                         <RadioButton layoutX="42.0" layoutY="1444.0" mnemonicParsing="false" text="A" />
-                        <RadioButton layoutX="42.0" layoutY="1485.0" mnemonicParsing="false" text="A" />
                         <RadioButton layoutX="42.0" layoutY="1526.0" mnemonicParsing="false" text="A" />
                         <RadioButton layoutX="42.0" layoutY="1567.0" mnemonicParsing="false" text="A" />
                         
@@ -165,17 +147,8 @@
                         <RadioButton mnemonicParsing="false" text="B" />
                         <RadioButton mnemonicParsing="false" text="B" />
                         <RadioButton layoutX="42.0" layoutY="1034.0" mnemonicParsing="false" text="B" />
-                        <RadioButton layoutX="42.0" layoutY="1075.0" mnemonicParsing="false" text="B" />
                         <RadioButton layoutX="42.0" layoutY="1116.0" mnemonicParsing="false" text="B" />
-                        <RadioButton layoutX="42.0" layoutY="1157.0" mnemonicParsing="false" text="B" />
-                        <RadioButton layoutX="42.0" layoutY="1198.0" mnemonicParsing="false" text="B" />
-                        <RadioButton layoutX="42.0" layoutY="1198.0" mnemonicParsing="false" text="B" />
-                        <RadioButton layoutX="42.0" layoutY="1198.0" mnemonicParsing="false" text="B" />
-                        <RadioButton layoutX="42.0" layoutY="1116.0" mnemonicParsing="false" text="B" />
-                        <RadioButton layoutX="42.0" layoutY="1157.0" mnemonicParsing="false" text="B" />
                         <RadioButton layoutX="42.0" layoutY="1239.0" mnemonicParsing="false" text="B" />
-                        <RadioButton layoutX="42.0" layoutY="1321.0" mnemonicParsing="false" text="B" />
-                        <RadioButton layoutX="42.0" layoutY="1362.0" mnemonicParsing="false" text="B" />
                         <RadioButton layoutX="42.0" layoutY="1362.0" mnemonicParsing="false" text="B" />
                         <RadioButton layoutX="42.0" layoutY="1444.0" mnemonicParsing="false" text="B" />
                      </children>
@@ -212,16 +185,7 @@
                         <RadioButton mnemonicParsing="false" text="C" />
                         <RadioButton layoutX="42.0" layoutY="993.0" mnemonicParsing="false" text="C" />
                         <RadioButton layoutX="42.0" layoutY="952.0" mnemonicParsing="false" text="C" />
-                        <RadioButton layoutX="42.0" layoutY="993.0" mnemonicParsing="false" text="C" />
-                        <RadioButton layoutX="42.0" layoutY="1034.0" mnemonicParsing="false" text="C" />
-                        <RadioButton layoutX="42.0" layoutY="1034.0" mnemonicParsing="false" text="C" />
                         <RadioButton layoutX="42.0" layoutY="1239.0" mnemonicParsing="false" text="C" />
-                        <RadioButton layoutX="42.0" layoutY="1116.0" mnemonicParsing="false" text="C" />
-                        <RadioButton layoutX="42.0" layoutY="1075.0" mnemonicParsing="false" text="C" />
-                        <RadioButton layoutX="42.0" layoutY="1157.0" mnemonicParsing="false" text="C" />
-                        <RadioButton layoutX="42.0" layoutY="1239.0" mnemonicParsing="false" text="C" />
-                        <RadioButton layoutX="42.0" layoutY="1321.0" mnemonicParsing="false" text="C" />
-                        <RadioButton layoutX="42.0" layoutY="1321.0" mnemonicParsing="false" text="C" />
                         <RadioButton layoutX="42.0" layoutY="1280.0" mnemonicParsing="false" text="C" />
                         <RadioButton layoutX="42.0" layoutY="1403.0" mnemonicParsing="false" text="C" />
                      </children>
@@ -257,16 +221,7 @@
                         <RadioButton mnemonicParsing="false" text="D" />
                         <RadioButton mnemonicParsing="false" text="D" />
                         <RadioButton layoutX="41.0" layoutY="1034.0" mnemonicParsing="false" text="D" />
-                        <RadioButton layoutX="41.0" layoutY="952.0" mnemonicParsing="false" text="D" />
-                        <RadioButton layoutX="41.0" layoutY="993.0" mnemonicParsing="false" text="D" />
-                        <RadioButton layoutX="41.0" layoutY="993.0" mnemonicParsing="false" text="D" />
-                        <RadioButton layoutX="41.0" layoutY="1075.0" mnemonicParsing="false" text="D" />
-                        <RadioButton layoutX="41.0" layoutY="1034.0" mnemonicParsing="false" text="D" />
-                        <RadioButton layoutX="41.0" layoutY="1116.0" mnemonicParsing="false" text="D" />
                         <RadioButton layoutX="41.0" layoutY="1157.0" mnemonicParsing="false" text="D" />
-                        <RadioButton layoutX="41.0" layoutY="1198.0" mnemonicParsing="false" text="D" />
-                        <RadioButton layoutX="41.0" layoutY="1157.0" mnemonicParsing="false" text="D" />
-                        <RadioButton layoutX="41.0" layoutY="1321.0" mnemonicParsing="false" text="D" />
                         <RadioButton layoutX="41.0" layoutY="1362.0" mnemonicParsing="false" text="D" />
                         <RadioButton layoutX="41.0" layoutY="1321.0" mnemonicParsing="false" text="D" />
                         <RadioButton layoutX="41.0" layoutY="1403.0" mnemonicParsing="false" text="D" />
@@ -287,12 +242,17 @@
             <Insets bottom="50.0" left="50.0" right="50.0" />
          </GridPane.margin>
          <children>
-            <VBox alignment="BOTTOM_LEFT" prefHeight="129.0" prefWidth="593.0" HBox.hgrow="ALWAYS">
+            <VBox alignment="BOTTOM_LEFT" prefHeight="129.0" prefWidth="472.0" HBox.hgrow="ALWAYS" />
+            <VBox alignment="BOTTOM_CENTER" prefHeight="129.0" prefWidth="197.0">
                <children>
-                  <Button mnemonicParsing="false" text="Back to the previous subpart" />
+                  <Label fx:id="Timer" text="Time">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
-            <VBox alignment="BOTTOM_RIGHT" prefHeight="129.0" prefWidth="604.0" HBox.hgrow="ALWAYS">
+            <VBox alignment="BOTTOM_RIGHT" prefHeight="129.0" prefWidth="473.0" HBox.hgrow="ALWAYS">
                <children>
                   <Button mnemonicParsing="false" text="Go to the next subpart" />
                </children>

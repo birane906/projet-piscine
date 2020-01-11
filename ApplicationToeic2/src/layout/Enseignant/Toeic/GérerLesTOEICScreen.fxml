@@ -61,7 +61,7 @@
                            <graphic>
                               <ImageView fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: ;">
                                  <image>
-                                    <Image url="@../../BoutonHome/my-home-button.png" />
+                                    <Image url="@../../../images/Commun/home.png" />
                                  </image>
                               </ImageView>
                            </graphic>

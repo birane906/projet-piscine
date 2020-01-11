@@ -26,6 +26,7 @@ public class AccueilEtudiantScreenController implements Initializable {
 	public AccueilEtudiantScreenController() {
         connection = ConnectionUtil.connectdb();
     }
+
 	
 	public void DeconnexionAction(ActionEvent event) {
 		try {

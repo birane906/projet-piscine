@@ -126,7 +126,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
          <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue sur votre espace TOEIC Polytech &lt;prénom&gt;. Ici vous avez la possibilité de voir les TOEIC programmés par vos enseignants, de retrouver vos résultats précédents/votre progression, de trouver les informations de contact de vos enseignants si vous avez des questions." textAlignment="JUSTIFY" wrappingWidth="1040.6708984375">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue sur votre espace TOEIC Polytech . Ici vous avez la possibilité de voir les TOEIC programmés par vos enseignants, de retrouver vos résultats précédents/votre progression, de trouver les informations de contact de vos enseignants si vous avez des questions." textAlignment="JUSTIFY" wrappingWidth="1040.6708984375">
                <font>
                   <Font size="20.0" />
                </font>
