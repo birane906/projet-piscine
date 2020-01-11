@@ -1,4 +1,4 @@
-package java;
+package enJava;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +10,7 @@ public class LoginApplication extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../src/layout/Login/FXMLDocument.fxml"));
         Scene scene = new Scene(root);
         stage.setTitle("Application TOEIC");
         stage.setScene(scene);

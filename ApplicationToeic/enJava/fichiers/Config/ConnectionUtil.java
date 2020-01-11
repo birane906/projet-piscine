@@ -1,4 +1,4 @@
-package java.fichiers.Config;
+package enJava.fichiers.Config;
 
 import java.sql.*;
 import javax.swing.*;

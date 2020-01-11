@@ -1,7 +1,8 @@
-package java.fichiers.Controller.Etudiant;
+package enJava.fichiers.Controller.Etudiant;
 
 //import de fichier java
 import java.net.URL;
+
 import java.util.ResourceBundle;
 import java.net.URL;
 import java.sql.Connection;
@@ -14,8 +15,8 @@ import javafx.scene.Node;
 import javafx.stage.Stage;
 
 //import interne a l application
-import java.fichiers.Config.ConnectionUtil;
-import java.fichiers.Controller.Login.FXMLDocumentController;
+import enJava.fichiers.Config.ConnectionUtil;
+import enJava.fichiers.Controller.Login.FXMLDocumentController;
 
 public class AccueilEtudiantScreenController implements Initializable {
 	
