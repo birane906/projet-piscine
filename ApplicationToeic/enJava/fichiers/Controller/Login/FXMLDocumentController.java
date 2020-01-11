@@ -63,7 +63,7 @@ public class FXMLDocumentController implements Initializable {
                 //dialogStage.close();
                 if (resultSet.getInt(6) == 1) {
                 	//scene = new Scene(FXMLLoader.load(getClass().getResource("../Prof/AccueilProfScreen.fxml")));
-                    dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../Prof/AccueilProfScreen.fxml")));
+                    dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Enseignant/AccueilProfScreen.fxml")));
                     //dialogStage.sizeToScene();
                     //dialogStage.setMaximized(false);
                     //dialogStage.setFullScreen(true);
@@ -72,7 +72,7 @@ public class FXMLDocumentController implements Initializable {
                 
                 else {
                 	//scene = new Scene(FXMLLoader.load(getClass().getResource("../Etudiant/AccueilEtudiantScreen.fxml")));
-                	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../Etudiant/AccueilEtudiantScreen.fxml")));
+                	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/AccueilEtudiantScreen.fxml")));
                 	//dialogStage.sizeToScene();
                     //dialogStage.setMaximized(false);
                     //dialogStage.setFullScreen(true);
