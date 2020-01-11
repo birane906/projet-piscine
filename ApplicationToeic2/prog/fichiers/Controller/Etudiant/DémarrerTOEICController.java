@@ -9,7 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.stage.Stage;
 
-public class PasDeTOEICProgController implements Initializable {
+public class DémarrerTOEICController implements Initializable{
 	
 	Stage dialogStage = new Stage();
 
@@ -23,11 +23,24 @@ public class PasDeTOEICProgController implements Initializable {
             e.printStackTrace();
         }
 	}
-
 	
+	public void Lancer(ActionEvent event) {
+		try {
+			Node node = (Node)event.getSource();
+            dialogStage = (Stage) node.getScene().getWindow();
+            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/Toeic/FXMLQuestionnaire.fxml")));
+		}
+		catch(Exception e){
+            e.printStackTrace();
+        }
+	}
+	
+	
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		
 	}
+
 }
