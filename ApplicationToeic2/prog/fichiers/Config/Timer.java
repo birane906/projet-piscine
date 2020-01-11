@@ -10,7 +10,7 @@ public class Timer implements java.lang.Runnable{
     public void runTimer(){
     	
         int i;
-        int j=74;
+        int j=74; //start à 74 minutes and 59 seconds
         while(j>-1) {
         	i=59;
         	while (i>-1){
@@ -25,7 +25,7 @@ public class Timer implements java.lang.Runnable{
         			Thread.sleep(1000L);    // 1000L = 1000ms = 1 second
         		}
         		catch (InterruptedException e) {
-        			//I don't think you need to do anything for your particular problem
+        			
         		}
         	}
         	j--;

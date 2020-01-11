@@ -5,6 +5,9 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.text.DateFormat;
+import java.text.Format;
+import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -22,6 +25,8 @@ public class AccueilEtudiantScreenController implements Initializable {
 	Connection connection = null;
 	PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
+    ResultSet resultSet1 = null;
+    ResultSet resultSet2 = null;
 	
 	public AccueilEtudiantScreenController() {
         connection = ConnectionUtil.connectdb();
@@ -47,10 +52,35 @@ public class AccueilEtudiantScreenController implements Initializable {
             preparedStatement.setString(1, FXMLDocumentController.mail());
             preparedStatement.setString(2, FXMLDocumentController.mdp());
             resultSet = preparedStatement.executeQuery();
+            
+            
             if(resultSet.next()){
-            	Node node = (Node)event.getSource();
-            	dialogStage = (Stage) node.getScene().getWindow();
-            	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/Toeic/DémarrerTOEICScreen.fxml")));
+            	
+            	String sqlDate = "SELECT Date FROM Programmer WHERE Programmer.NumToeic = ?";
+                preparedStatement = connection.prepareStatement(sqlDate);
+                preparedStatement.setString(1, Integer.toString(resultSet.getInt(1)));
+                resultSet1 = preparedStatement.executeQuery();
+                if(resultSet1.next()) {
+                
+                	String sqlDate1 = "SELECT DATEDIFF(?,?)";
+                	preparedStatement = connection.prepareStatement(sqlDate1);
+                	preparedStatement.setDate(1, resultSet1.getDate(1));
+                	preparedStatement.setDate(2, new java.sql.Date(System.currentTimeMillis()));
+                	resultSet2 = preparedStatement.executeQuery();
+                	
+                	if(resultSet2.next()) {
+                		if(resultSet2.getInt(1) == 0) {
+                			Node node = (Node)event.getSource();
+                			dialogStage = (Stage) node.getScene().getWindow();
+                			dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/Toeic/DémarrerTOEICScreen.fxml")));
+                		}
+                		else {
+                			Node node = (Node)event.getSource();
+                			dialogStage = (Stage) node.getScene().getWindow();
+                			dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/Toeic/PasDeTOEICProgScreen.fxml")));
+                		}
+                	}
+                }
             }
             else {
             	Node node = (Node)event.getSource();
