@@ -50,12 +50,30 @@
                   </VBox>
                   <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
                      <children>
-                        <RadioButton mnemonicParsing="false" text="A" />
-                        <RadioButton mnemonicParsing="false" text="A" />
-                        <RadioButton mnemonicParsing="false" text="A" />
-                        <RadioButton mnemonicParsing="false" text="A" />
-                        <RadioButton mnemonicParsing="false" text="A" />
-                        <RadioButton mnemonicParsing="false" text="A" />
+                        <RadioButton mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q1" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q2" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q3" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q4" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q5" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q6" />
+                           </toggleGroup></RadioButton>
                      </children>
                      <HBox.margin>
                         <Insets />
@@ -69,12 +87,12 @@
                         <Insets top="40.0" />
                      </padding>
                      <children>
-                        <RadioButton mnemonicParsing="false" text="B" />
-                        <RadioButton mnemonicParsing="false" text="B" />
-                        <RadioButton mnemonicParsing="false" text="B" />
-                        <RadioButton mnemonicParsing="false" text="B" />
-                        <RadioButton mnemonicParsing="false" text="B" />
-                        <RadioButton mnemonicParsing="false" text="B" />
+                        <RadioButton mnemonicParsing="false" text="B" toggleGroup="$q1" />
+                        <RadioButton mnemonicParsing="false" text="B" toggleGroup="$q2" />
+                        <RadioButton mnemonicParsing="false" text="B" toggleGroup="$q3" />
+                        <RadioButton mnemonicParsing="false" text="B" toggleGroup="$q4" />
+                        <RadioButton mnemonicParsing="false" text="B" toggleGroup="$q5" />
+                        <RadioButton mnemonicParsing="false" text="B" toggleGroup="$q6" />
                      </children>
                   </VBox>
                   <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
@@ -82,12 +100,12 @@
                         <Insets top="40.0" />
                      </padding>
                      <children>
-                        <RadioButton mnemonicParsing="false" text="C" />
-                        <RadioButton mnemonicParsing="false" text="C" />
-                        <RadioButton mnemonicParsing="false" text="C" />
-                        <RadioButton mnemonicParsing="false" text="C" />
-                        <RadioButton mnemonicParsing="false" text="C" />
-                        <RadioButton mnemonicParsing="false" text="C" />
+                        <RadioButton mnemonicParsing="false" text="C" toggleGroup="$q1" />
+                        <RadioButton mnemonicParsing="false" text="C" toggleGroup="$q2" />
+                        <RadioButton mnemonicParsing="false" text="C" toggleGroup="$q3" />
+                        <RadioButton mnemonicParsing="false" text="C" toggleGroup="$q4" />
+                        <RadioButton mnemonicParsing="false" text="C" toggleGroup="$q5" />
+                        <RadioButton mnemonicParsing="false" text="C" toggleGroup="$q6" />
                      </children>
                   </VBox>
                   <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
@@ -95,12 +113,12 @@
                         <Insets top="40.0" />
                      </padding>
                      <children>
-                        <RadioButton mnemonicParsing="false" text="D" />
-                        <RadioButton mnemonicParsing="false" text="D" />
-                        <RadioButton mnemonicParsing="false" text="D" />
-                        <RadioButton mnemonicParsing="false" text="D" />
-                        <RadioButton mnemonicParsing="false" text="D" />
-                        <RadioButton mnemonicParsing="false" text="D" />
+                        <RadioButton mnemonicParsing="false" text="D" toggleGroup="$q1" />
+                        <RadioButton mnemonicParsing="false" text="D" toggleGroup="$q2" />
+                        <RadioButton mnemonicParsing="false" text="D" toggleGroup="$q3" />
+                        <RadioButton mnemonicParsing="false" text="D" toggleGroup="$q4" />
+                        <RadioButton mnemonicParsing="false" text="D" toggleGroup="$q5" />
+                        <RadioButton mnemonicParsing="false" text="D" toggleGroup="$q6" />
                      </children>
                   </VBox>
                </children>
@@ -121,7 +139,7 @@
             <VBox alignment="BOTTOM_LEFT" prefHeight="129.0" prefWidth="593.0" HBox.hgrow="ALWAYS" />
             <VBox alignment="BOTTOM_RIGHT" prefHeight="129.0" prefWidth="604.0" HBox.hgrow="ALWAYS">
                <children>
-                  <Button mnemonicParsing="false" text="Go to the next subpart" />
+                  <Button mnemonicParsing="false" onAction="#next" text="Go to the next subpart" />
                </children>
             </VBox>
          </children>
