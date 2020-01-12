@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 public class AccueilProfScreenController implements Initializable {
 	
-Stage dialogStage = new Stage();
+	Stage dialogStage = new Stage();
 	
 	Connection connection = null;
 	PreparedStatement preparedStatement = null;
@@ -62,7 +62,7 @@ Stage dialogStage = new Stage();
 		try {
 			Node node = (Node)event.getSource();
             dialogStage = (Stage) node.getScene().getWindow();
-            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Enseignant//GestionEtudiant/GérerLesEtudiantsScreen.fxml")));
+            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Enseignant/GestionEtudiant/GérerLesEtudiantsScreen.fxml")));
 		}
 		catch(Exception e){
             e.printStackTrace();
