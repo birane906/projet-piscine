@@ -18,7 +18,12 @@ import javafx.stage.Stage;
 import prog.fichiers.Config.ConnectionUtil;
 import prog.fichiers.Controller.Login.FXMLDocumentController;
 
-public class QuestionnaireController4 implements Initializable {
+/*
+ * IMPORTANT NB Questions Partie 4 = NB Questions Partie 5
+ * donc on reprend la même structure que dans la p4 A71 correspond à A101 par exemple et q100 à q130
+ */
+
+public class QuestionnaireController5 implements Initializable {
 
 	Stage dialogStage = new Stage();
 	
@@ -26,7 +31,7 @@ public class QuestionnaireController4 implements Initializable {
 	PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
     ResultSet resultSet2= null;
-    
+    //correspond aux questions 101..130
     @FXML
     private ToggleGroup q71,q72,q73,q74,q75,q76,q77,q78,q79,q80,q81,q82,q83,q84,q85,q86,q87,q88,q89,q90,q91;
     @FXML
@@ -44,73 +49,11 @@ public class QuestionnaireController4 implements Initializable {
     RadioButton D71,D72,D73,D74,D75,D76,D77,D78,D79,D80,D81,D82,D83,D84,D85,D86,D87,D88,D89,D90,D91,D92,D93,D94,D95,D96,D97,D98,D99,D100;
 
     
-    public QuestionnaireController4() {
+    public QuestionnaireController5() {
         connection = ConnectionUtil.connectdb();
     }
     
     
-    public void back(ActionEvent event) {
-		try {
-			String sql = "SELECT idUtilisateur FROM Utilisateur WHERE Utilisateur.MailUtilisateur = ? AND Utilisateur.MdpUtilisateur = ?";
-			preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, FXMLDocumentController.mail());
-            preparedStatement.setString(2, FXMLDocumentController.mdp());
-            resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()) {
-            	/*listeTog.add(q1);
-            	listeTog.add(q2);
-            	listeTog.add(q3);
-            	listeTog.add(q4);
-            	listeTog.add(q5);
-            	listeTog.add(q6);*/
-            	
-            	String sql2 = "INSERT INTO Repondre (NumPart,NumQuestion,idUtilisateur,ReponseE) VALUES (?, ?, ?, ?)";
-            	String sql3 = "UPDATE Repondre SET Repondre.ReponseE = ? WHERE Repondre.idUtilisateur = ? AND Repondre.NumPart = ? AND Repondre.NumQuestion = ? ";
-            	String sql4 = "SELECT * FROM Repondre WHERE Repondre.idUtilisateur = ? AND Repondre.NumPart = ? AND Repondre.NumQuestion = ?";
-            	
-            	for(int i =71 ; i <= 100; i++) {
-            		preparedStatement = connection.prepareStatement(sql4);
-                	preparedStatement.setInt(1,resultSet.getInt(1));
-                	preparedStatement.setInt(2,4);
-                	preparedStatement.setInt(3,i);
-                	resultSet2 = preparedStatement.executeQuery();
-                	if(!resultSet2.next()) {
-                	
-                		preparedStatement = connection.prepareStatement(sql2);
-                		preparedStatement.setInt(1, 4);
-                		preparedStatement.setInt(2, i);
-                		preparedStatement.setInt(3,resultSet.getInt(1));
-                		RadioButton rb = (RadioButton)listeTog1.get(i-71).getSelectedToggle();
-                		if (rb !=null) {
-                			preparedStatement.setString(4,rb.getText());
-                			preparedStatement.executeUpdate();
-                		}
-                		sql2 = "INSERT INTO Repondre (NumPart,NumQuestion,idUtilisateur,ReponseE) VALUES (?, ?, ?, ?)";
-                	}
-                	else {
-                		preparedStatement = connection.prepareStatement(sql3);
-                		preparedStatement.setInt(2,resultSet.getInt(1));
-                		preparedStatement.setInt(3,4);
-                		preparedStatement.setInt(4,i);
-                		RadioButton rb = (RadioButton)listeTog1.get(i-71).getSelectedToggle();
-                		if (rb !=null) {
-                			preparedStatement.setString(1,rb.getText());
-                			preparedStatement.executeUpdate();
-                		}
-                		sql3 = "UPDATE Repondre SET Repondre.ReponseE = ? WHERE Repondre.idUtilisateur = ? AND Repondre.NumPart = ? AND Repondre.NumQuestion = ? ";
-                		
-                	}
-                	sql4 = "SELECT * FROM Repondre WHERE Repondre.idUtilisateur = ? AND Repondre.NumPart = ? AND Repondre.NumQuestion = ?";
-            	}
-            }
-            Node node = (Node)event.getSource();
-        	dialogStage = (Stage) node.getScene().getWindow();
-        	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/Toeic/FXMLQuestionnaire3.fxml")));
-		}
-		catch(Exception e){
-            e.printStackTrace();
-        }
-	}
     
     public void next(ActionEvent event) {
 		try {
@@ -134,14 +77,14 @@ public class QuestionnaireController4 implements Initializable {
             	for(int i =71 ; i <= 100; i++) {
             		preparedStatement = connection.prepareStatement(sql4);
                 	preparedStatement.setInt(1,resultSet.getInt(1));
-                	preparedStatement.setInt(2,4);
-                	preparedStatement.setInt(3,i);
+                	preparedStatement.setInt(2,5);
+                	preparedStatement.setInt(3,i+30);
                 	resultSet2 = preparedStatement.executeQuery();
                 	if(!resultSet2.next()) {
                 	
                 		preparedStatement = connection.prepareStatement(sql2);
-                		preparedStatement.setInt(1, 4);
-                		preparedStatement.setInt(2, i);
+                		preparedStatement.setInt(1, 5);
+                		preparedStatement.setInt(2, i+30);
                 		preparedStatement.setInt(3,resultSet.getInt(1));
                 		RadioButton rb = (RadioButton)listeTog1.get(i-71).getSelectedToggle();
                 		if (rb !=null) {
@@ -153,8 +96,8 @@ public class QuestionnaireController4 implements Initializable {
                 	else {
                 		preparedStatement = connection.prepareStatement(sql3);
                 		preparedStatement.setInt(2,resultSet.getInt(1));
-                		preparedStatement.setInt(3,4);
-                		preparedStatement.setInt(4,i);
+                		preparedStatement.setInt(3,5);
+                		preparedStatement.setInt(4,i+30);
                 		RadioButton rb = (RadioButton)listeTog1.get(i-71).getSelectedToggle();
                 		if (rb !=null) {
                 			preparedStatement.setString(1,rb.getText());
@@ -168,7 +111,7 @@ public class QuestionnaireController4 implements Initializable {
             }
             Node node = (Node)event.getSource();
         	dialogStage = (Stage) node.getScene().getWindow();
-        	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/Toeic/FXMLQuestionnaire5.fxml")));
+        	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/Toeic/FXMLQuestionnaire6.fxml")));
 		}
 		catch(Exception e){
             e.printStackTrace();
@@ -222,8 +165,8 @@ public class QuestionnaireController4 implements Initializable {
     			for(int i = 71; i <= 100; i++) {
             		preparedStatement = connection.prepareStatement(sql4);
                 	preparedStatement.setInt(1,resultSet.getInt(1));
-                	preparedStatement.setInt(2,4);
-                	preparedStatement.setInt(3,i);
+                	preparedStatement.setInt(2,5);
+                	preparedStatement.setInt(3,i+30);
                 	resultSet2 = preparedStatement.executeQuery();
                 	if(resultSet2.next()) { //problème en dessous, rentre pas dans les if
                 		if(resultSet2.getString(4).equals("A")) {
@@ -369,6 +312,5 @@ public class QuestionnaireController4 implements Initializable {
             e.printStackTrace();
         }
 	}
-
-
+	
 }

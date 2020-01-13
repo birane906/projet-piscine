@@ -108,7 +108,7 @@ public class AccueilEtudiantScreenController implements Initializable {
 		try {
 			Node node = (Node)event.getSource();
             dialogStage = (Stage) node.getScene().getWindow();
-            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("./ContactEnseignant.fxml")));
+            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/InfosEnseignants/ContactEnseignant.fxml")));
 		}
 		catch(Exception e){
             e.printStackTrace();
