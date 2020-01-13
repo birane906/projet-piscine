@@ -1,4 +1,4 @@
-package java.fichiers.Controller.Etudiant;
+package progjava.fichiers.Controller.Etudiant;
 
 //import de fichier java
 import java.net.URL;
