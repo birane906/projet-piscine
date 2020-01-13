@@ -1,6 +1,6 @@
-package progjava.fichiers.Controller.Enseignant;
+package enJava.fichiers.Controller.Enseignant;
 
-import progjava.fichiers.Config.ConnectionUtil;
+import enJava.fichiers.Config.ConnectionUtil;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 public class AccueilProfScreenController implements Initializable {
 	
-Stage dialogStage = new Stage();
+	Stage dialogStage = new Stage();
 	
 	Connection connection = null;
 	PreparedStatement preparedStatement = null;
@@ -62,7 +62,7 @@ Stage dialogStage = new Stage();
 		try {
 			Node node = (Node)event.getSource();
             dialogStage = (Stage) node.getScene().getWindow();
-            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Enseignant//GestionEtudiant/GérerLesEtudiantsScreen.fxml")));
+            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Enseignant/GestionEtudiant/GérerLesEtudiantsScreen.fxml")));
 		}
 		catch(Exception e){
             e.printStackTrace();

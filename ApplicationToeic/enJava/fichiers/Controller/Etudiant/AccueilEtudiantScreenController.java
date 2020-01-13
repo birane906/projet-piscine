@@ -1,7 +1,8 @@
-package progjava.fichiers.Controller.Etudiant;
+package enJava.fichiers.Controller.Etudiant;
 
 //import de fichier java
 import java.net.URL;
+
 import java.util.ResourceBundle;
 import java.net.URL;
 import java.sql.Connection;
@@ -14,8 +15,8 @@ import javafx.scene.Node;
 import javafx.stage.Stage;
 
 //import interne a l application
-import java.fichiers.Config.ConnectionUtil;
-import java.fichiers.Controller.Login.FXMLDocumentController;
+import enJava.fichiers.Config.ConnectionUtil;
+import enJava.fichiers.Controller.Login.FXMLDocumentController;
 
 public class AccueilEtudiantScreenController implements Initializable {
 	
@@ -33,7 +34,7 @@ public class AccueilEtudiantScreenController implements Initializable {
 		try {
 			Node node = (Node)event.getSource();
             dialogStage = (Stage) node.getScene().getWindow();
-            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../Login/FXMLDocument.fxml")));
+            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Login/FXMLDocument.fxml")));
 		}
 		catch(Exception e){
             e.printStackTrace();
@@ -51,12 +52,12 @@ public class AccueilEtudiantScreenController implements Initializable {
             if(resultSet.next()){
             	Node node = (Node)event.getSource();
             	dialogStage = (Stage) node.getScene().getWindow();
-            	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("./DémarrerTOEICScreen.fxml")));
+            	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/Toeic/DémarrerTOEICScreen.fxml")));
             }
             else {
             	Node node = (Node)event.getSource();
             	dialogStage = (Stage) node.getScene().getWindow();
-            	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("./PasDeTOEICProgScreen.fxml")));
+            	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/Toeic/PasDeTOEICProgScreen.fxml")));
             }
 		}
 		catch(Exception e){
@@ -68,7 +69,7 @@ public class AccueilEtudiantScreenController implements Initializable {
 		try {
 			Node node = (Node)event.getSource();
             dialogStage = (Stage) node.getScene().getWindow();
-            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../StatsEtudiant/MesRésultatsEtudiantScreen.fxml")));
+            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/Statistiques/MesRésultatsEtudiantScreen.fxml")));
 		}
 		catch(Exception e){
             e.printStackTrace();
@@ -79,7 +80,7 @@ public class AccueilEtudiantScreenController implements Initializable {
 		try {
 			Node node = (Node)event.getSource();
             dialogStage = (Stage) node.getScene().getWindow();
-            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("./ContactEnseignant.fxml")));
+            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../src/layout/Etudiant/InfosEnseignants/ContactEnseignant.fxml")));
 		}
 		catch(Exception e){
             e.printStackTrace();
