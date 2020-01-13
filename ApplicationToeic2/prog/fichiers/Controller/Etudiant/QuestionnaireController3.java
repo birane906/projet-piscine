@@ -68,7 +68,7 @@ public class QuestionnaireController3 implements Initializable{
             	String sql3 = "UPDATE Repondre SET Repondre.ReponseE = ? WHERE Repondre.idUtilisateur = ? AND Repondre.NumPart = ? AND Repondre.NumQuestion = ? ";
             	String sql4 = "SELECT * FROM Repondre WHERE Repondre.idUtilisateur = ? AND Repondre.NumPart = ? AND Repondre.NumQuestion = ?";
             	
-            	for(int i =32 ; i <= 70; i++) {
+            	for(int i = 32 ; i <= 70; i++) {
             		preparedStatement = connection.prepareStatement(sql4);
                 	preparedStatement.setInt(1,resultSet.getInt(1));
                 	preparedStatement.setInt(2,3);
