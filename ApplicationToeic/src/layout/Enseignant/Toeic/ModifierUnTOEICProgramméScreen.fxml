@@ -47,7 +47,6 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -80,15 +79,6 @@
                         <ChoiceBox prefHeight="31.0" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <ChoiceBox prefHeight="31.0" prefWidth="236.0" GridPane.columnIndex="1" />
                         <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                           <children>
-                              <Button mnemonicParsing="false" style="-fx-border-color: white; -fx-background-color: blue;" text="Ajouter à la liste" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="21.0" />
-                                 </font>
-                              </Button>
-                           </children>
-                        </HBox>
                      </children>
                   </GridPane>
                </children>
@@ -106,33 +96,8 @@
                         <GridPane prefHeight="335.0" prefWidth="302.0">
                            <children>
                               <HBox alignment="CENTER" prefHeight="84.0" prefWidth="185.0" GridPane.rowIndex="2" />
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
-                                 <children>
-                                    <Label text="Heure :" textFill="WHITE">
-                                       <font>
-                                          <Font size="24.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                 <children>
-                                    <TableView prefHeight="154.0" prefWidth="180.0">
-                                      <columns>
-                                        <TableColumn prefWidth="95.0" text="Participants" />
-                                          <TableColumn prefWidth="84.0" text="Supprimer" />
-                                      </columns>
-                                    </TableView>
-                                 </children>
-                              </HBox>
-                              <TextField alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                 <font>
-                                    <Font name="System Italic" size="15.0" />
-                                 </font>
-                                 <GridPane.margin>
-                                    <Insets />
-                                 </GridPane.margin>
-                              </TextField>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                              <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                            </children>
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="98.0" />
@@ -184,7 +149,7 @@
                            <graphic>
                               <ImageView fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: ;">
                                  <image>
-                                    <Image url="@../../BoutonHome/my-home-button.png" />
+                                    <Image url="@../../../images/Commun/home.png" />
                                  </image>
                               </ImageView>
                            </graphic>

@@ -13,7 +13,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #0243E9;" stylesheets="@../../../../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="enJava.fichiers.Controller.Enseignant.Statistiques.RésultatsProfScreenController">
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #0243E9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="enJava.fichiers.Controller.Enseignant.Statistiques.RésultatsProfScreenController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -85,7 +85,19 @@
                <children>
                   <VBox alignment="TOP_CENTER" prefHeight="335.0" prefWidth="577.0">
                      <children>
-                        <ChoiceBox prefHeight="31.0" prefWidth="236.0" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ChoiceBox fx:id="choixParticipants" prefHeight="39.0" prefWidth="243.0" />
+                              <Button mnemonicParsing="false" onAction="#Valider" style="-fx-background-color: blue; -fx-border-color: white;" text="Valider" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
                         <LineChart prefHeight="288.0" prefWidth="537.0">
                           <xAxis>
                             <CategoryAxis side="BOTTOM" />

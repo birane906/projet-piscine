@@ -1,4 +1,4 @@
-package enJava.fichiers.Controller.Enseignant.Toeic;
+package enJava.fichiers.Controller.Enseignant.Statistiques;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -12,15 +12,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.stage.Stage;
 
-public class AfficherTousLesTOEICSScreenController implements Initializable{
+public class RésultatsProfPromoScreenController implements Initializable{
 
+	
 Stage dialogStage = new Stage();
 	
 	Connection connection = null;
 	PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
-    
-	public AfficherTousLesTOEICSScreenController() {
+	
+	public RésultatsProfPromoScreenController() {
         connection = ConnectionUtil.connectdb();
     }
 	// Bouton Home
@@ -35,34 +36,9 @@ Stage dialogStage = new Stage();
         }
 	}
 	
-	// Bouton retour page Gérer TOEIC
-	public void RetourGérerTOEIC(ActionEvent event) {
-		try {	
-			Node node = (Node)event.getSource();
-	        dialogStage = (Stage) node.getScene().getWindow();
-	        dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../../src/layout/Enseignant/Toeic/GérerLesTOEICScreen.fxml")));
-		}
-		catch(Exception e){
-			e.printStackTrace();
-	    }
-	}
-
-	// Bouton créer TOEIC
-	public void CréerTOEIC(ActionEvent event) {
-		try {	
-			Node node = (Node)event.getSource();
-	        dialogStage = (Stage) node.getScene().getWindow();
-	        dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../../src/layout/Enseignant/Toeic/CréerUnTOEICScreen.fxml")));
-		}
-		catch(Exception e){
-			e.printStackTrace();
-	    }
-	}
-	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		
 	}
-
 }
