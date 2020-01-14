@@ -155,7 +155,7 @@ public class AccueilEtudiantScreenController implements Initializable {
         	preparedStatement.setString(2, FXMLDocumentController.mdp());
         	resultSet0 = preparedStatement.executeQuery();
         	if(resultSet0.next()) {
-        		NomPrenom.setText(resultSet0.getString(1)+ " " + resultSet0.getString(2));
+        		NomPrenom.setText(resultSet0.getString(1)+ "  " + resultSet0.getString(2));
         	}
 		}
 		catch(Exception e){
