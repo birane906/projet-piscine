@@ -124,14 +124,37 @@
             </VBox>
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
          <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue sur votre espace TOEIC Polytech . Ici vous avez la possibilité de voir les TOEIC programmés par vos enseignants, de retrouver vos résultats précédents/votre progression, de trouver les informations de contact de vos enseignants si vous avez des questions." textAlignment="JUSTIFY" wrappingWidth="1040.6708984375">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue sur votre espace TOEIC Polytech : " textAlignment="JUSTIFY" wrappingWidth="500.6708984375">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="NomPrenom" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="535.6708984375">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Ici vous avez la possibilité de voir les TOEIC programmés par vos enseignants, de retrouver vos résultats précédents/votre progression, de trouver les informations de contact de vos enseignants si vous avez des questions." textAlignment="JUSTIFY" wrappingWidth="1040.6708984375">
                <font>
-                  <Font size="20.0" />
+                  <Font size="25.0" />
                </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
             </Text>
          </children>
-      </HBox>
+      </VBox>
    </children>
 </GridPane>

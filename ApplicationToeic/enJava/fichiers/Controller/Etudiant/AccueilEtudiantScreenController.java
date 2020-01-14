@@ -11,9 +11,11 @@ import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import enJava.fichiers.Config.ConnectionUtil;
 import enJava.fichiers.Controller.Login.FXMLDocumentController;
@@ -29,6 +31,11 @@ public class AccueilEtudiantScreenController implements Initializable {
     ResultSet resultSet2 = null; //stocke la différence entre la date actuelle et la date du futur toeic
     ResultSet resultSet3 = null;
     ResultSet resultSet4 = null;
+    ResultSet resultSet0 = null;
+    @FXML
+    Text NomPrenom;
+    
+    
 	public AccueilEtudiantScreenController() {
         connection = ConnectionUtil.connectdb();
     }
@@ -141,8 +148,21 @@ public class AccueilEtudiantScreenController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
+		try {
+			String sqlNP="SELECT NomUtilisateur,PrenomUtilisateur FROM Utilisateur WHERE Utilisateur.MailUtilisateur = ? AND Utilisateur.MdpUtilisateur = ?";
+			preparedStatement = connection.prepareStatement(sqlNP);
+        	preparedStatement.setString(1, FXMLDocumentController.mail());
+        	preparedStatement.setString(2, FXMLDocumentController.mdp());
+        	resultSet0 = preparedStatement.executeQuery();
+        	if(resultSet0.next()) {
+        		NomPrenom.setText(resultSet0.getString(1)+ " " + resultSet0.getString(2));
+        	}
+		}
+		catch(Exception e){
+            e.printStackTrace();
+        
 		
-	}
+		}
 
+	}
 }
