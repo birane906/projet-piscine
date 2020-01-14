@@ -48,6 +48,7 @@
                         <Insets top="40.0" />
                      </VBox.margin>
                   </Text>
+                  <Label fx:id="rep" text="Label" />
                </children>
                <HBox.margin>
                   <Insets top="40.0" />

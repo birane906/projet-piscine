@@ -7,15 +7,20 @@ import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import prog.fichiers.Config.ConnectionUtil;
 
 public class FinDeToeicController implements Initializable{
 	
 	Stage dialogStage = new Stage();
+	
+	@FXML
+	Label rep;
 	
 	Connection connection = null;
 	//PreparedStatement preparedStatement = null;
@@ -37,11 +42,15 @@ public class FinDeToeicController implements Initializable{
             e.printStackTrace();
         }
 	}
+	
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		
+		CalculNote.note();
+		String noteE = Integer.toString(CalculNote.noteE());
+		String noteO = Integer.toString(CalculNote.noteO());
+		rep.setText(noteE +" "+ noteO);
 	}
 
 }
