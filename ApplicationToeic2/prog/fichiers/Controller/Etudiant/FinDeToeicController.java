@@ -106,13 +106,10 @@ public class FinDeToeicController implements Initializable{
 				}
 				
 			}
-		}
         }
 		catch(Exception e){
             e.printStackTrace();
         }
     }
-		
-	}
 
 }
