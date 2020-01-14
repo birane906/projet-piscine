@@ -12,7 +12,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #0243E9;" stylesheets="@../../../../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #0243E9;" stylesheets="@../../../../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="enJava.fichiers.Controller.Etudiant.Toeic.DémarrerTOEICController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -101,7 +101,7 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="193.0" style="-fx-background-color: #51c549; -fx-border-color: white;" text="Lancer le test" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#Lancer" prefHeight="56.0" prefWidth="193.0" style="-fx-background-color: #51c549; -fx-border-color: white;" text="Lancer le test" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font></Button>
@@ -109,7 +109,7 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="37.0" style="-fx-background-color: transparent;">
+                        <Button mnemonicParsing="false" onAction="#Home" prefHeight="62.0" prefWidth="37.0" style="-fx-background-color: transparent;">
                            <graphic>
                               <ImageView fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: ;">
                                  <image>

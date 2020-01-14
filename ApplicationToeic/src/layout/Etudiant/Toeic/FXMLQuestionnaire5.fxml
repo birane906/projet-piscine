@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #2D3447;" stylesheets="@../../../../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="enJava.fichiers.Controller.Etudiant.Toeic.QuestionnaireController5">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="234.0" minHeight="10.0" prefHeight="107.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="488.0" minHeight="10.0" prefHeight="434.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="555.0" minHeight="10.0" prefHeight="179.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Writing Part - Subpart 5" textFill="WHITE">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <content>
+            <HBox alignment="CENTER" prefHeight="431.0" prefWidth="1278.0" style="-fx-background-color: #1D47B4;">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="431.0" prefWidth="162.0" spacing="20.0">
+                     <children>
+                        <Label text="Question 101" />
+                        <Label text="Question 102" />
+                        <Label text="Question 103" />
+                        <Label text="Question 104" />
+                        <Label text="Question 105" />
+                        <Label text="Question 106" />
+                        <Label text="Question 107" />
+                        <Label text="Question 108" />
+                        <Label text="Question 109" />
+                        <Label text="Question 110" />
+                        <Label text="Question 111" />
+                        <Label text="Question 112" />
+                        <Label text="Question 113" />
+                        <Label text="Question 114" />
+                        <Label text="Question 115" />
+                        <Label text="Question 116" />
+                        <Label text="Question 117" />
+                        <Label text="Question 118" />
+                        <Label text="Question 119" />
+                        <Label text="Question 120" />
+                        <Label text="Question 121" />
+                        <Label text="Question 122" />
+                        <Label text="Question 123" />
+                        <Label text="Question 124" />
+                        <Label text="Question 125" />
+                        <Label layoutX="51.0" layoutY="1034.0" text="Question 126" />
+                        <Label layoutX="51.0" layoutY="1075.0" text="Question 127" />
+                        <Label layoutX="51.0" layoutY="1116.0" text="Question 128" />
+                        <Label layoutX="51.0" layoutY="1157.0" text="Question 129" />
+                        <Label layoutX="51.0" layoutY="1198.0" text="Question 130" />
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="40.0" top="40.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <RadioButton fx:id="A71" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q71" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A72" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q72" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A73" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q73" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A74" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q74" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A75" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q75" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A76" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q76" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A77" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q77" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A78" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q78" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A79" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q79" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A80" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q80" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A81" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q81" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A82" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q82" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A83" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q83" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A84" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q84" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A85" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q85" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A86" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q86" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A87" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q87" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A88" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q88" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A89" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q89" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A90" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q90" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A91" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q91" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A92" layoutX="42.0" layoutY="1239.0" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q92" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A93" layoutX="42.0" layoutY="1280.0" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q93" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A94" layoutX="42.0" layoutY="1321.0" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q94" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A95" layoutX="42.0" layoutY="1362.0" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q95" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A96" layoutX="42.0" layoutY="1403.0" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q96" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A97" layoutX="42.0" layoutY="1444.0" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q97" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A98" layoutX="42.0" layoutY="1485.0" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q98" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A99" layoutX="42.0" layoutY="1526.0" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q99" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="A100" layoutX="42.0" layoutY="1567.0" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q100" />
+                           </toggleGroup>
+                        </RadioButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="40.0" top="40.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <RadioButton fx:id="B71" mnemonicParsing="false" text="B" toggleGroup="$q71" />
+                        <RadioButton fx:id="B72" mnemonicParsing="false" text="B" toggleGroup="$q72" />
+                        <RadioButton fx:id="B73" mnemonicParsing="false" text="B" toggleGroup="$q73" />
+                        <RadioButton fx:id="B74" mnemonicParsing="false" text="B" toggleGroup="$q74" />
+                        <RadioButton fx:id="B75" mnemonicParsing="false" text="B" toggleGroup="$q75" />
+                        <RadioButton fx:id="B76" mnemonicParsing="false" text="B" toggleGroup="$q76" />
+                        <RadioButton fx:id="B77" mnemonicParsing="false" text="B" toggleGroup="$q77" />
+                        <RadioButton fx:id="B78" mnemonicParsing="false" text="B" toggleGroup="$q78" />
+                        <RadioButton fx:id="B79" mnemonicParsing="false" text="B" toggleGroup="$q79" />
+                        <RadioButton fx:id="B80" mnemonicParsing="false" text="B" toggleGroup="$q80" />
+                        <RadioButton fx:id="B81" mnemonicParsing="false" text="B" toggleGroup="$q81" />
+                        <RadioButton fx:id="B82" mnemonicParsing="false" text="B" toggleGroup="$q82" />
+                        <RadioButton fx:id="B83" mnemonicParsing="false" text="B" toggleGroup="$q83" />
+                        <RadioButton fx:id="B84" mnemonicParsing="false" text="B" toggleGroup="$q84" />
+                        <RadioButton fx:id="B85" mnemonicParsing="false" text="B" toggleGroup="$q85" />
+                        <RadioButton fx:id="B86" mnemonicParsing="false" text="B" toggleGroup="$q86" />
+                        <RadioButton fx:id="B87" mnemonicParsing="false" text="B" toggleGroup="$q87" />
+                        <RadioButton fx:id="B88" mnemonicParsing="false" text="B" toggleGroup="$q88" />
+                        <RadioButton fx:id="B89" mnemonicParsing="false" text="B" toggleGroup="$q89" />
+                        <RadioButton fx:id="B90" mnemonicParsing="false" text="B" toggleGroup="$q90" />
+                        <RadioButton fx:id="B91" mnemonicParsing="false" text="B" toggleGroup="$q91" />
+                        <RadioButton fx:id="B92" mnemonicParsing="false" text="B" toggleGroup="$q92" />
+                        <RadioButton fx:id="B93" mnemonicParsing="false" text="B" toggleGroup="$q93" />
+                        <RadioButton fx:id="B94" mnemonicParsing="false" text="B" toggleGroup="$q94" />
+                        <RadioButton fx:id="B95" mnemonicParsing="false" text="B" toggleGroup="$q95" />
+                        <RadioButton fx:id="B96" layoutX="42.0" layoutY="1034.0" mnemonicParsing="false" text="B" toggleGroup="$q96" />
+                        <RadioButton fx:id="B97" layoutX="42.0" layoutY="1075.0" mnemonicParsing="false" text="B" toggleGroup="$q97" />
+                        <RadioButton fx:id="B98" layoutX="42.0" layoutY="1157.0" mnemonicParsing="false" text="B" toggleGroup="$q98" />
+                        <RadioButton fx:id="B99" layoutX="42.0" layoutY="1362.0" mnemonicParsing="false" text="B" toggleGroup="$q99" />
+                        <RadioButton fx:id="B100" layoutX="42.0" layoutY="1444.0" mnemonicParsing="false" text="B" toggleGroup="$q100" />
+                     </children>
+                     <padding>
+                        <Insets bottom="40.0" top="40.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <RadioButton fx:id="C71" mnemonicParsing="false" text="C" toggleGroup="$q71" />
+                        <RadioButton fx:id="C72" mnemonicParsing="false" text="C" toggleGroup="$q72" />
+                        <RadioButton fx:id="C73" mnemonicParsing="false" text="C" toggleGroup="$q73" />
+                        <RadioButton fx:id="C74" mnemonicParsing="false" text="C" toggleGroup="$q74" />
+                        <RadioButton fx:id="C75" mnemonicParsing="false" text="C" toggleGroup="$q75" />
+                        <RadioButton fx:id="C76" mnemonicParsing="false" text="C" toggleGroup="$q76" />
+                        <RadioButton fx:id="C77" mnemonicParsing="false" text="C" toggleGroup="$q77" />
+                        <RadioButton fx:id="C78" mnemonicParsing="false" text="C" toggleGroup="$q78" />
+                        <RadioButton fx:id="C79" mnemonicParsing="false" text="C" toggleGroup="$q79" />
+                        <RadioButton fx:id="C80" mnemonicParsing="false" text="C" toggleGroup="$q80" />
+                        <RadioButton fx:id="C81" mnemonicParsing="false" text="C" toggleGroup="$q81" />
+                        <RadioButton fx:id="C82" mnemonicParsing="false" text="C" toggleGroup="$q82" />
+                        <RadioButton fx:id="C83" mnemonicParsing="false" text="C" toggleGroup="$q83" />
+                        <RadioButton fx:id="C84" mnemonicParsing="false" text="C" toggleGroup="$q84" />
+                        <RadioButton fx:id="C85" mnemonicParsing="false" text="C" toggleGroup="$q85" />
+                        <RadioButton fx:id="C86" mnemonicParsing="false" text="C" toggleGroup="$q86" />
+                        <RadioButton fx:id="C87" mnemonicParsing="false" text="C" toggleGroup="$q87" />
+                        <RadioButton fx:id="C88" mnemonicParsing="false" text="C" toggleGroup="$q88" />
+                        <RadioButton fx:id="C89" mnemonicParsing="false" text="C" toggleGroup="$q89" />
+                        <RadioButton fx:id="C90" mnemonicParsing="false" text="C" toggleGroup="$q90" />
+                        <RadioButton fx:id="C91" mnemonicParsing="false" text="C" toggleGroup="$q91" />
+                        <RadioButton fx:id="C92" mnemonicParsing="false" text="C" toggleGroup="$q92" />
+                        <RadioButton fx:id="C93" mnemonicParsing="false" text="C" toggleGroup="$q93" />
+                        <RadioButton fx:id="C94" mnemonicParsing="false" text="C" toggleGroup="$q94" />
+                        <RadioButton fx:id="C95" mnemonicParsing="false" text="C" toggleGroup="$q95" />
+                        <RadioButton fx:id="C96" layoutX="42.0" layoutY="993.0" mnemonicParsing="false" text="C" toggleGroup="$q96" />
+                        <RadioButton fx:id="C97" layoutX="42.0" layoutY="952.0" mnemonicParsing="false" text="C" toggleGroup="$q97" />
+                        <RadioButton fx:id="C98" layoutX="42.0" layoutY="993.0" mnemonicParsing="false" text="C" toggleGroup="$q98" />
+                        <RadioButton fx:id="C99" layoutX="42.0" layoutY="1239.0" mnemonicParsing="false" text="C" toggleGroup="$q99" />
+                        <RadioButton fx:id="C100" layoutX="42.0" layoutY="1403.0" mnemonicParsing="false" text="C" toggleGroup="$q100" />
+                     </children>
+                     <padding>
+                        <Insets bottom="40.0" top="40.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <RadioButton fx:id="D71" mnemonicParsing="false" text="D" toggleGroup="$q71" />
+                        <RadioButton fx:id="D72" mnemonicParsing="false" text="D" toggleGroup="$q72" />
+                        <RadioButton fx:id="D73" mnemonicParsing="false" text="D" toggleGroup="$q73" />
+                        <RadioButton fx:id="D74" mnemonicParsing="false" text="D" toggleGroup="$q74" />
+                        <RadioButton fx:id="D75" mnemonicParsing="false" text="D" toggleGroup="$q75" />
+                        <RadioButton fx:id="D76" mnemonicParsing="false" text="D" toggleGroup="$q76" />
+                        <RadioButton fx:id="D77" mnemonicParsing="false" text="D" toggleGroup="$q77" />
+                        <RadioButton fx:id="D78" mnemonicParsing="false" text="D" toggleGroup="$q78" />
+                        <RadioButton fx:id="D79" mnemonicParsing="false" text="D" toggleGroup="$q79" />
+                        <RadioButton fx:id="D80" mnemonicParsing="false" text="D" toggleGroup="$q80" />
+                        <RadioButton fx:id="D81" mnemonicParsing="false" text="D" toggleGroup="$q81" />
+                        <RadioButton fx:id="D82" mnemonicParsing="false" text="D" toggleGroup="$q82" />
+                        <RadioButton fx:id="D83" mnemonicParsing="false" text="D" toggleGroup="$q83" />
+                        <RadioButton fx:id="D84" mnemonicParsing="false" text="D" toggleGroup="$q84" />
+                        <RadioButton fx:id="D85" mnemonicParsing="false" text="D" toggleGroup="$q85" />
+                        <RadioButton fx:id="D86" mnemonicParsing="false" text="D" toggleGroup="$q86" />
+                        <RadioButton fx:id="D87" mnemonicParsing="false" text="D" toggleGroup="$q87" />
+                        <RadioButton fx:id="D88" mnemonicParsing="false" text="D" toggleGroup="$q88" />
+                        <RadioButton fx:id="D89" mnemonicParsing="false" text="D" toggleGroup="$q89" />
+                        <RadioButton fx:id="D90" mnemonicParsing="false" text="D" toggleGroup="$q90" />
+                        <RadioButton fx:id="D91" mnemonicParsing="false" text="D" toggleGroup="$q91" />
+                        <RadioButton fx:id="D92" mnemonicParsing="false" text="D" toggleGroup="$q92" />
+                        <RadioButton fx:id="D93" mnemonicParsing="false" text="D" toggleGroup="$q93" />
+                        <RadioButton fx:id="D94" mnemonicParsing="false" text="D" toggleGroup="$q94" />
+                        <RadioButton fx:id="D95" mnemonicParsing="false" text="D" toggleGroup="$q95" />
+                        <RadioButton fx:id="D96" layoutX="41.0" layoutY="1034.0" mnemonicParsing="false" text="D" toggleGroup="$q96" />
+                        <RadioButton fx:id="D97" layoutX="41.0" layoutY="952.0" mnemonicParsing="false" text="D" toggleGroup="$q97" />
+                        <RadioButton fx:id="D98" layoutX="41.0" layoutY="993.0" mnemonicParsing="false" text="D" toggleGroup="$q98" />
+                        <RadioButton fx:id="D99" layoutX="41.0" layoutY="1321.0" mnemonicParsing="false" text="D" toggleGroup="$q99" />
+                        <RadioButton fx:id="D100" layoutX="41.0" layoutY="1403.0" mnemonicParsing="false" text="D" toggleGroup="$q100" />
+                     </children>
+                     <padding>
+                        <Insets bottom="40.0" top="40.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </content>
+         <GridPane.margin>
+            <Insets left="150.0" right="150.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </ScrollPane>
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="50.0" left="50.0" right="50.0" />
+         </GridPane.margin>
+         <children>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="129.0" prefWidth="472.0" HBox.hgrow="ALWAYS" />
+            <VBox alignment="BOTTOM_RIGHT" prefHeight="129.0" prefWidth="473.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#next" text="Go to the next subpart" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</GridPane>
