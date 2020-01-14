@@ -13,7 +13,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #0243E9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #0243E9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="enJava.fichiers.Controller.Enseignant.Statistiques.ProgressionSousPartieEtudiantProfScreenController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -57,7 +57,7 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="395.0" style="-fx-background-color: ff961e; -fx-border-color: white;" text="Revenir à la page des résultats" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#RetourRes" prefHeight="56.0" prefWidth="395.0" style="-fx-background-color: ff961e; -fx-border-color: white;" text="Revenir à la page des résultats" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>
@@ -65,7 +65,7 @@
                      </children></HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="37.0" style="-fx-background-color: transparent;">
+                        <Button mnemonicParsing="false" onAction="#Home" prefHeight="62.0" prefWidth="37.0" style="-fx-background-color: transparent;">
                            <graphic>
                               <ImageView fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: ;">
                                  <image>
@@ -92,7 +92,7 @@
             <VBox alignment="TOP_CENTER" prefHeight="283.0" prefWidth="1120.0" GridPane.rowIndex="1" />
             <HBox alignment="CENTER" prefHeight="133.0" prefWidth="1280.0">
                <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous pouvez, ici, observer la progression de l'étudiant &lt;Y&gt; sur les différentes sous-parties :" wrappingWidth="820.40673828125">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous pouvez, ici, observer la progression de l'étudiant sur les différentes sous-parties :" wrappingWidth="820.40673828125">
                      <font>
                         <Font name="System Italic" size="25.0" />
                      </font>

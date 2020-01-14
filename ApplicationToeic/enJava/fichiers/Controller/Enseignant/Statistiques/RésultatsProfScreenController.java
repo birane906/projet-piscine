@@ -21,6 +21,16 @@ public class RésultatsProfScreenController implements Initializable{
 	@FXML
 	ChoiceBox<String> choixParticipants;
 	
+	static String parti;
+	
+	public static String getParti() {
+		return parti;
+	}
+	
+	public static void setParti(String a){
+		parti = a;
+	}
+	
 	Stage dialogStage = new Stage();
 	
 	Connection connection = null;
@@ -42,14 +52,22 @@ public class RésultatsProfScreenController implements Initializable{
         }
 	}
 	
-	// Bouton Home
+	// Fonction pour le bouton valider, nous change d'écran selon si on veut pas promo ou par étudiant
 		public void Valider(ActionEvent event) {
 			try {
 				String participants = (String) choixParticipants.getValue();
 				if(participants != null) {
-					Node node = (Node)event.getSource();
-		            dialogStage = (Stage) node.getScene().getWindow();
-		            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../../src/layout/Enseignant/Statistiques/RésultatsProfPromoScreen.fxml")));
+					setParti(participants);
+					if(participants == "Etudiant") {
+						Node node = (Node)event.getSource();
+			            dialogStage = (Stage) node.getScene().getWindow();
+			            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../../src/layout/Enseignant/Statistiques/RésultatsEtudiantVueProfScreen.fxml")));
+					}
+					else {
+						Node node = (Node)event.getSource();
+			            dialogStage = (Stage) node.getScene().getWindow();
+			            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../../src/layout/Enseignant/Statistiques/RésultatsProfPromoScreen.fxml")));
+					}
 				}
 				else {
 					infoBox("Vous devez d'abord sélectionner une filière.", null, "Erreur");

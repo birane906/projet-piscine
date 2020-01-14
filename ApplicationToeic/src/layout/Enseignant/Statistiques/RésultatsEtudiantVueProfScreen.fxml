@@ -13,7 +13,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #0243E9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #0243E9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="enJava.fichiers.Controller.Enseignant.Statistiques.RésultatsEtudiantVueProfScreenController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -50,19 +50,70 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <ChoiceBox prefWidth="150.0" />
-                     </children>
-                  </HBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                      <children>
-                        <ChoiceBox prefWidth="150.0" />
-                        <ChoiceBox prefWidth="150.0">
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Nom :" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="45.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="nomEtu" alignment="CENTER" prefHeight="31.0" prefWidth="131.0" text="Entrer le nom">
+                                 <font>
+                                    <Font name="System Italic" size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Prénom :" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="prenomEtu" alignment="CENTER" prefHeight="31.0" prefWidth="131.0" text="Entrer le prénom">
+                                 <font>
+                                    <Font name="System Italic" size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="110.0" prefWidth="297.0">
+                           <children>
+                              <Label text="Filière :" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ChoiceBox fx:id="choixPromo" prefWidth="150.0" />
+                           </children>
                            <VBox.margin>
-                              <Insets top="40.0" />
+                              <Insets top="30.0" />
                            </VBox.margin>
-                        </ChoiceBox>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#AfficherStats" style="-fx-background-color: blue; -fx-border-color: white;" text="Afficher ses stats" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="25.0" top="35.0" />
+                           </VBox.margin>
+                        </Button>
                      </children>
                   </VBox>
                </children>
@@ -83,7 +134,7 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="37.0" style="-fx-background-color: transparent;">
+                        <Button mnemonicParsing="false" onAction="#Home" prefHeight="62.0" prefWidth="37.0" style="-fx-background-color: transparent;">
                            <graphic>
                               <ImageView fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: ;">
                                  <image>
@@ -96,7 +147,7 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="364.0" style="-fx-background-color: green; -fx-border-color: green;" text="Récapitulatif dernier TOEIC" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#Recap" prefHeight="56.0" prefWidth="364.0" style="-fx-background-color: green; -fx-border-color: green;" text="Récapitulatif dernier TOEIC" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>
@@ -120,7 +171,19 @@
                <children>
                   <VBox alignment="TOP_CENTER" prefHeight="335.0" prefWidth="577.0">
                      <children>
-                        <ChoiceBox prefHeight="31.0" prefWidth="236.0" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ChoiceBox fx:id="choixParticipants" prefHeight="39.0" prefWidth="243.0" />
+                              <Button mnemonicParsing="false" onAction="#Valider" style="-fx-background-color: blue; -fx-border-color: white;" text="Valider" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
                         <LineChart prefHeight="288.0" prefWidth="537.0">
                           <xAxis>
                             <CategoryAxis side="BOTTOM" />
@@ -140,7 +203,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="335.0" prefWidth="669.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="364.0" style="-fx-background-color: ff961e; -fx-border-color: white;" text="Son Bulletin" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#Bulletin" prefHeight="56.0" prefWidth="364.0" style="-fx-background-color: ff961e; -fx-border-color: white;" text="Son Bulletin" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>
@@ -148,7 +211,7 @@
                               <Insets bottom="40.0" />
                            </VBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="364.0" style="-fx-background-color: ff961e; -fx-border-color: white;" text="Progression par partie" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#PPP" prefHeight="56.0" prefWidth="364.0" style="-fx-background-color: ff961e; -fx-border-color: white;" text="Progression par partie" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>
@@ -156,7 +219,7 @@
                               <Insets bottom="40.0" />
                            </VBox.margin>
                         </Button>
-                        <Button layoutX="241.0" layoutY="161.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="364.0" style="-fx-background-color: ff961e; -fx-border-color: white;" text="Progression par sous-partie" textFill="WHITE">
+                        <Button layoutX="241.0" layoutY="161.0" mnemonicParsing="false" onAction="#PPSP" prefHeight="56.0" prefWidth="364.0" style="-fx-background-color: ff961e; -fx-border-color: white;" text="Progression par sous-partie" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>
