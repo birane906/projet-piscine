@@ -12,6 +12,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Alert.AlertType;
@@ -27,6 +30,15 @@ public class RésultatsEtudiantVueProfScreenController implements Initializable {
 	private TextField nomEtu;
 	@FXML
 	private TextField prenomEtu;
+	
+	@FXML
+	LineChart<CategoryAxis,NumberAxis> ToeicScoreEvolution;
+	
+	@FXML
+	CategoryAxis xToeicScoreEv;
+	
+	@FXML
+	NumberAxis yToeicScoreEv;
 	
 	static int idU;
 	
@@ -67,8 +79,13 @@ public class RésultatsEtudiantVueProfScreenController implements Initializable {
 			            		infoBox("Il n'existe pas d'étudiant ayant ces informations, veuillez réessayer.", null,"Erreur");
 			            	}
 			            	else {
+			            		FXCollections.<String>observableArrayList() 
 			            		idU = resultSet.getInt(2);
 				            	infoBox("On a bien récolté le bon étudiant "+ Integer.toString(idU), null,"Bravo");
+				            	
+				            	xToeicScoreEv = new CategoryAxis();
+				            	xToeicScoreEv.setCategories(FXCollections.<String>observableArrayList());
+				            	ToeicScoreEvolution = new LineChart<CategoryAxis, NumberAxis>(null, null);
 			            	}
 			            }
 					}

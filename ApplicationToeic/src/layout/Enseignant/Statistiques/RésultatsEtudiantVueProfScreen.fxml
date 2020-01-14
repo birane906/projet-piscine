@@ -184,12 +184,12 @@
                               </Button>
                            </children>
                         </HBox>
-                        <LineChart prefHeight="288.0" prefWidth="537.0">
+                        <LineChart id="ToeicScoreEvolution" prefHeight="288.0" prefWidth="537.0" style="-fx-background-color: white; -fx-border-color: black;" title="Evolution des scores au Toeic par date">
                           <xAxis>
-                            <CategoryAxis side="BOTTOM" />
+                            <CategoryAxis id="xToeicScoreEv" label="Date Toeic" side="BOTTOM" />
                           </xAxis>
                           <yAxis>
-                            <NumberAxis side="LEFT" />
+                            <NumberAxis id="yToeicScoreEv" label="Score Toeic" side="LEFT" />
                           </yAxis>
                            <VBox.margin>
                               <Insets left="20.0" right="20.0" top="30.0" />
