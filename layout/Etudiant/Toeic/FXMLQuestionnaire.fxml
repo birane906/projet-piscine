@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #2D3447;" stylesheets="@../../../../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="enJava.fichiers.Controller.Etudiant.Toeic.QuestionnaireController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="234.0" minHeight="10.0" prefHeight="107.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="488.0" minHeight="10.0" prefHeight="434.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="555.0" minHeight="10.0" prefHeight="179.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Oral Part - Subpart 1" textFill="WHITE">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox style="-fx-background-color: grey;" GridPane.rowIndex="1">
+         <children>
+            <HBox alignment="CENTER" prefHeight="435.0" prefWidth="717.0" style="-fx-background-color: #1D47B4;" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="428.0" prefWidth="162.0" spacing="20.0">
+                     <children>
+                        <Label text="Question 1" />
+                        <Label text="Question 2" />
+                        <Label text="Question 3" />
+                        <Label text="Question 4" />
+                        <Label text="Question 5" />
+                        <Label text="Question 6" />
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="40.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <RadioButton fx:id="A1" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q1" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="A2" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q2" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="A3" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q3" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="A4" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q4" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="A5" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q5" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="A6" mnemonicParsing="false" text="A">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="q6" />
+                           </toggleGroup></RadioButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="40.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <padding>
+                        <Insets top="40.0" />
+                     </padding>
+                     <children>
+                        <RadioButton fx:id="B1" mnemonicParsing="false" text="B" toggleGroup="$q1" />
+                        <RadioButton fx:id="B2" mnemonicParsing="false" text="B" toggleGroup="$q2" />
+                        <RadioButton fx:id="B3" mnemonicParsing="false" text="B" toggleGroup="$q3" />
+                        <RadioButton fx:id="B4" mnemonicParsing="false" text="B" toggleGroup="$q4" />
+                        <RadioButton fx:id="B5" mnemonicParsing="false" text="B" toggleGroup="$q5" />
+                        <RadioButton fx:id="B6" mnemonicParsing="false" text="B" toggleGroup="$q6" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <padding>
+                        <Insets top="40.0" />
+                     </padding>
+                     <children>
+                        <RadioButton fx:id="C1" mnemonicParsing="false" text="C" toggleGroup="$q1" />
+                        <RadioButton fx:id="C2" mnemonicParsing="false" text="C" toggleGroup="$q2" />
+                        <RadioButton fx:id="C3" mnemonicParsing="false" text="C" toggleGroup="$q3" />
+                        <RadioButton fx:id="C4" mnemonicParsing="false" text="C" toggleGroup="$q4" />
+                        <RadioButton fx:id="C5" mnemonicParsing="false" text="C" toggleGroup="$q5" />
+                        <RadioButton fx:id="C6" mnemonicParsing="false" text="C" toggleGroup="$q6" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <padding>
+                        <Insets top="40.0" />
+                     </padding>
+                     <children>
+                        <RadioButton fx:id="D1" mnemonicParsing="false" text="D" toggleGroup="$q1" />
+                        <RadioButton fx:id="D2" mnemonicParsing="false" text="D" toggleGroup="$q2" />
+                        <RadioButton fx:id="D3" mnemonicParsing="false" text="D" toggleGroup="$q3" />
+                        <RadioButton fx:id="D4" mnemonicParsing="false" text="D" toggleGroup="$q4" />
+                        <RadioButton fx:id="D5" mnemonicParsing="false" text="D" toggleGroup="$q5" />
+                        <RadioButton fx:id="D6" mnemonicParsing="false" text="D" toggleGroup="$q6" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <GridPane.margin>
+            <Insets left="250.0" right="250.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="50.0" left="50.0" right="50.0" />
+         </GridPane.margin>
+         <children>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="129.0" prefWidth="593.0" HBox.hgrow="ALWAYS" />
+            <VBox alignment="BOTTOM_RIGHT" prefHeight="129.0" prefWidth="604.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#next" text="Go to the next subpart" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</GridPane>
