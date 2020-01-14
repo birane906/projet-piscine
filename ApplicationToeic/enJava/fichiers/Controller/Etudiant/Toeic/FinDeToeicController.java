@@ -114,7 +114,11 @@ public class FinDeToeicController implements Initializable{
                     		preparedStatement.setInt(2, resultSet3.getInt(1));
                     		preparedStatement.setDate(3, resultSet1.getDate(1));
                     		preparedStatement.executeUpdate();
-                			
+                    		
+                    		String sql4= "DELETE FROM Repondre WHERE idUtilisateur=?";
+                    		preparedStatement = connection.prepareStatement(sql4);
+                			preparedStatement.setInt(1, resultSet3.getInt(1));
+                			preparedStatement.executeUpdate();
                 		}
 					}
 				}
