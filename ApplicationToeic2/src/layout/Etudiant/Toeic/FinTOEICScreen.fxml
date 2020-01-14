@@ -42,7 +42,7 @@
                               <Font size="30.0" />
                            </font>
                         </Text>
-                        <Label fx:id="rep" prefHeight="45.0" prefWidth="128.0" textFill="WHITE">
+                        <Label fx:id="rep" prefHeight="45.0" prefWidth="986.0" textFill="WHITE">
                            <font>
                               <Font size="30.0" />
                            </font>

@@ -19,10 +19,25 @@ public class CalculNote {
     static ResultSet resultSet5 = null;
     static int scoreE;
     static int scoreO;
+    static int scoreP1;
+    static int scoreP2;
+    static int scoreP3;
+    static int scoreP4;
+    static int scoreP5;
+    static int scoreP6;
+    static int scoreP7;
+    
 	
 	public CalculNote() {
-		setScoreE(1);
+		setScoreE(0);
 		setScoreO(0);
+		setScoreP1(0);
+		setScoreP2(0);
+		setScoreP3(0);
+		setScoreP4(0);
+		setScoreP5(0);
+		setScoreP6(0);
+		setScoreP7(0);
         connection = ConnectionUtil.connectdb();
         try {
 			String sql = "SELECT numTOEIC FROM Programmer INNER JOIN Utilisateur ON Programmer.FiliereEtAnnee = Utilisateur.FiliereEtAnnee WHERE Utilisateur.MailUtilisateur = ? AND Utilisateur.MdpUtilisateur = ?";
@@ -60,12 +75,34 @@ public class CalculNote {
                 				resultSet5 = preparedStatement.executeQuery();
                 				if(resultSet5.next()) {
                 					if(resultSet5.getString(1).equals(resultSet4.getString(1)))	{
-                						if(resultSet4.getInt(2)<101) {
+                						if(resultSet4.getInt(2)<7) {
                 							setScoreO(getScoreO() + 1);
+                							setScoreP1(getScoreP1()+1);
+                						}
+                						else if(resultSet4.getInt(2)<32) {
+                							setScoreO(getScoreO() + 1);
+                							setScoreP2(getScoreP2()+1);
+                						}
+                						else if(resultSet4.getInt(2)<71) {
+                							setScoreO(getScoreO() + 1);
+                							setScoreP3(getScoreP3()+1);
+                						}
+                						else if(resultSet4.getInt(2)<101) {
+                							setScoreO(getScoreO() + 1);
+                							setScoreP4(getScoreP4()+1);
+                						}
+                						else if(resultSet4.getInt(2)<131) {
+                							setScoreE(getScoreE() + 1);
+                							setScoreP5(getScoreP5()+1);
+                						}
+                						else if(resultSet4.getInt(2)<147) {
+                							setScoreE(getScoreE() + 1);
+                							setScoreP6(getScoreP6()+1);
                 						}
                 						else {
                 							setScoreE(getScoreE() + 1);
-                    				}
+                							setScoreP7(getScoreP7()+1);
+                						}
                     			}
                     		}
                 			
@@ -206,6 +243,62 @@ public class CalculNote {
 			result = 495;
 		}
 		return result;
+	}
+
+	public static int getScoreP1() {
+		return scoreP1;
+	}
+
+	public static void setScoreP1(int scoreP1) {
+		CalculNote.scoreP1 = scoreP1;
+	}
+
+	public static int getScoreP2() {
+		return scoreP2;
+	}
+
+	public static void setScoreP2(int scoreP2) {
+		CalculNote.scoreP2 = scoreP2;
+	}
+
+	public static int getScoreP3() {
+		return scoreP3;
+	}
+
+	public static void setScoreP3(int scoreP3) {
+		CalculNote.scoreP3 = scoreP3;
+	}
+
+	public static int getScoreP4() {
+		return scoreP4;
+	}
+
+	public static void setScoreP4(int scoreP4) {
+		CalculNote.scoreP4 = scoreP4;
+	}
+
+	public static int getScoreP5() {
+		return scoreP5;
+	}
+
+	public static void setScoreP5(int scoreP5) {
+		CalculNote.scoreP5 = scoreP5;
+	}
+
+	public static int getScoreP6() {
+		return scoreP6;
+	}
+
+	public static void setScoreP6(int scoreP6) {
+		CalculNote.scoreP6 = scoreP6;
+	}
+
+	public static int getScoreP7() {
+		return scoreP7;
+	}
+
+	public static void setScoreP7(int scoreP7) {
+		CalculNote.scoreP7 = scoreP7;
 	}
 
 }
