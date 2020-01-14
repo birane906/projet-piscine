@@ -222,12 +222,12 @@
          <children>
             <VBox alignment="BOTTOM_LEFT" prefHeight="129.0" prefWidth="593.0" HBox.hgrow="ALWAYS">
                <children>
-                  <Button mnemonicParsing="false" onAction="#back" style="-fx-border-color: white; -fx-background-color: green;" text="Back to the previous subpart" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#back" prefHeight="50.0" prefWidth="250.0" style="-fx-border-color: white; -fx-background-color: green;" text="Back to the previous subpart" textFill="WHITE" />
                </children>
             </VBox>
             <VBox alignment="BOTTOM_RIGHT" prefHeight="129.0" prefWidth="604.0" HBox.hgrow="ALWAYS">
                <children>
-                  <Button mnemonicParsing="false" onAction="#next" prefHeight="33.0" prefWidth="199.0" style="-fx-border-color: white; -fx-background-color: green;" text="Go to the next subpart" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#next" prefHeight="50.0" prefWidth="250.0" style="-fx-border-color: white; -fx-background-color: green;" text="Go to the next subpart" textFill="WHITE" />
                </children>
             </VBox>
          </children>
