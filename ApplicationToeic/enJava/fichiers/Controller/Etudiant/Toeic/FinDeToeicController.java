@@ -25,6 +25,7 @@ public class FinDeToeicController implements Initializable{
 	@FXML
 	Label rep;
 	
+	
 	Connection connection = null;
 	PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
