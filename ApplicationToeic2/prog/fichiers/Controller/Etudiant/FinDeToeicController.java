@@ -47,10 +47,12 @@ public class FinDeToeicController implements Initializable{
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		CalculNote.note();
-		String noteE = Integer.toString(CalculNote.noteE());
-		String noteO = Integer.toString(CalculNote.noteO());
-		rep.setText(noteE +" "+ noteO);
+		CalculNote note = new CalculNote();
+		int noteE=note.noteE();
+		int noteO=note.noteE();
+		int tot=noteE+noteO;
+		String noteTot = Integer.toString(tot);
+		rep.setText(tot+"/990");
 	}
 
 }

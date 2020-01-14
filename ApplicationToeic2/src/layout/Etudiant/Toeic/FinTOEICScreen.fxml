@@ -35,11 +35,20 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Félicitations !  Vous venez de terminer ce TOEIC, votre score total est de xxx/975." textAlignment="JUSTIFY" wrappingWidth="1077.6708984375">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </Text>
+                  <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="1078.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Félicitations !  Vous venez de terminer ce TOEIC, votre score total est de " textAlignment="JUSTIFY" wrappingWidth="955.6708984375">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="rep" prefHeight="45.0" prefWidth="128.0" textFill="WHITE">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Si vous le souhaitez, vous pouvez consulter le détail de vos réponses ainsi que votre score par parties en cliquant sur &quot;voir détails&quot; sinon vous pouvez retourner à l'accueil afin de vous déconnecter. " textAlignment="JUSTIFY" wrappingWidth="1077.6708984375">
                      <font>
                         <Font size="30.0" />
@@ -48,7 +57,6 @@
                         <Insets top="40.0" />
                      </VBox.margin>
                   </Text>
-                  <Label fx:id="rep" text="Label" />
                </children>
                <HBox.margin>
                   <Insets top="40.0" />
