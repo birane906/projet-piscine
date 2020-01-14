@@ -138,52 +138,52 @@ public class CalculNote {
 		
 		int result = 5;
 		if (getScoreE() > 15 && getScoreE() < 25) {
-			result = 5*(getScoreE()-14);
+			result = 5*getScoreE()-70;
 		}
 		if(getScoreE() > 24 && getScoreE() < 28) {
-			result = 5*(getScoreE()-13);
+			result = 5*getScoreE()-65;
 		}
 		if(getScoreE() > 27 && getScoreE() < 33) {
-			result = 5*(getScoreE()-12);
+			result = 5*getScoreE()-60;
 		}
 		if(getScoreE() > 32 && getScoreE() < 38 ){
-			result = 5*(getScoreE()-11);
+			result = 5*getScoreE()-55;
 		}
 		if(getScoreE() > 37 && getScoreE()<41) {
-			result = 5*(getScoreE()-10);
+			result = 5*getScoreE()-50;
 		}
 		if(getScoreE() > 40 && getScoreE()<46) {
-			result = 5*(getScoreE()-9);
+			result = 5*getScoreE()-45;
 		}
 		if(getScoreE() > 45 && getScoreE()<49) {
-			result = 5*(getScoreE()-8);
+			result = 5*getScoreE()-40;
 		}
 		if(getScoreE() > 48 && getScoreE()<56) {
-			result = 5*(getScoreE()-7);
+			result = 5*getScoreE()-35;
 		}
 		if(getScoreE() > 55 && getScoreE()<61) {
-			result = 5*(getScoreE()-6);
+			result = 5*getScoreE()-30;
 		}
 		if(getScoreE() > 60 && getScoreE()<64) {
-			result = 5*(getScoreE()-5);
+			result = 5*getScoreE()-25;
 		}
 		if(getScoreE() > 63 && getScoreE()<67) {
-			result = 5*(getScoreE()-4);
+			result = 5*getScoreE()-20;
 		}
 		if(getScoreE() > 66 && getScoreE()<72) {
-			result = 5*(getScoreE()-3);
+			result = 5*getScoreE()-15;
 		}
 		if(getScoreE() > 71 && getScoreE()<77) {
-			result = 5*(getScoreE()-2);
+			result = 5*getScoreE()-10;
 		}
 		if(getScoreE() > 76 && getScoreE()<89) {
-			result = 5*(getScoreE()-1);
+			result = 5*getScoreE()-5;
 		}
 		if(getScoreE() > 88 && getScoreE()<92) {
 			result = 5*(getScoreE());
 		}
 		if(getScoreE() > 91 && getScoreE()<97) {
-			result = 5*(getScoreE()+1);
+			result = 5*getScoreE()+5;
 		}
 		if(getScoreE() > 96) {
 			result = 495;
@@ -195,49 +195,49 @@ public class CalculNote {
 		
 		int result = 5;
 		if (getScoreO() > 6 && getScoreO() < 26) {
-			result = 5*(getScoreO()-5);
+			result = 5*getScoreO()-25;
 		}
 		if(getScoreO() > 25 && getScoreO() < 35) {
-			result = 5*(getScoreO()-4);
+			result = 5*getScoreO()-20;
 		}
 		if(getScoreO() > 34 && getScoreO() < 44) {
-			result = 5*(getScoreO()-3);
+			result = 5*getScoreO()-15;
 		}
 		if(getScoreO() > 43 && getScoreO() < 47 ){
-			result = 5*(getScoreO()-2);
+			result = 5*getScoreO()-10;
 		}
 		if(getScoreO() > 46 && getScoreO()<48) {
-			result = 5*(getScoreO()-1);
+			result = 5*getScoreO()-5;
 		}
 		if(getScoreO() > 47 && getScoreO()<53) {
 			result = 5*(getScoreO());
 		}
 		if(getScoreO() > 52 && getScoreO()<56) {
-			result = 5*(getScoreO()+1);
+			result = 5*getScoreO()+5;
 		}
 		if(getScoreO() > 55 && getScoreO()<59) {
-			result = 5*(getScoreO()+2);
+			result = 5*getScoreO()+10;
 		}
 		if(getScoreO() > 58 && getScoreO()<64) {
-			result = 5*(getScoreO()+3);
+			result = 5*getScoreO()+15;
 		}
 		if(getScoreO() > 63 && getScoreO()<67) {
-			result = 5*(getScoreO()+4);
+			result = 5*getScoreO()+20;
 		}
 		if(getScoreO() > 66 && getScoreO()<70) {
-			result = 5*(getScoreO()+5);
+			result = 5*getScoreO()+25;
 		}
 		if(getScoreO() > 69 && getScoreO()<77) {
-			result = 5*(getScoreO()+6);
+			result = 5*getScoreO()+30;
 		}
 		if(getScoreO() > 76 && getScoreO()<80) {
-			result = 5*(getScoreO()+7);
+			result = 5*getScoreO()+35;
 		}
 		if(getScoreO() > 79 && getScoreO()<83) {
-			result = 5*(getScoreO()+8);
+			result = 5*getScoreO()+40;
 		}
 		if(getScoreO() > 82 && getScoreO()<89) {
-			result = 5*(getScoreO()+9);
+			result = 5*getScoreO()+45;
 		}
 		if(getScoreO() > 89) {
 			result = 495;

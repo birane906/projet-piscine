@@ -17,7 +17,7 @@ public class PasDeTOEICProgController implements Initializable {
 		try {
 			Node node = (Node)event.getSource();
             dialogStage = (Stage) node.getScene().getWindow();
-            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../../src/layout/Etudiant/Toeic/AccueilEtudiantScreen.fxml")));
+            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../../src/layout/Etudiant/AccueilEtudiantScreen.fxml")));
 		}
 		catch(Exception e){
             e.printStackTrace();

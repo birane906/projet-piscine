@@ -55,7 +55,7 @@ public class FinDeToeicController implements Initializable{
 		// TODO Auto-generated method stub
 		CalculNote note = new CalculNote();
 		int noteE=note.noteE();
-		int noteO=note.noteE();
+		int noteO=note.noteO();
 		int tot=noteE+noteO;
 		int p1 = note.getScoreP1();
 		int p2 = note.getScoreP2();
@@ -108,6 +108,12 @@ public class FinDeToeicController implements Initializable{
                 				preparedStatement.setDate(5, resultSet1.getDate(1));
                 				preparedStatement.executeUpdate();
                 			}
+                			String sql3 = "INSERT INTO Passer (NumTOEIC,idUtilisateur,Date) VALUES(?,?,?)";
+                			preparedStatement = connection.prepareStatement(sql3);
+                			preparedStatement.setInt(1, resultSet.getInt(1));
+                    		preparedStatement.setInt(2, resultSet3.getInt(1));
+                    		preparedStatement.setDate(3, resultSet1.getDate(1));
+                    		preparedStatement.executeUpdate();
                 			
                 		}
 					}
