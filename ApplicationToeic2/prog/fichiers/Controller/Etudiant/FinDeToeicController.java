@@ -4,6 +4,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -12,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 import prog.fichiers.Config.ConnectionUtil;
 import prog.fichiers.Controller.Login.FXMLDocumentController;
@@ -62,6 +64,14 @@ public class FinDeToeicController implements Initializable{
 		int p5 = note.getScoreP5();
 		int p6 = note.getScoreP6();
 		int p7 = note.getScoreP7();
+		ArrayList<Integer> pS = new ArrayList<Integer>();
+		pS.add(p1);
+		pS.add(p2);
+		pS.add(p3);
+		pS.add(p4);
+		pS.add(p5);
+		pS.add(p6);
+		pS.add(p7);
 		String noteTot = Integer.toString(tot);
 		rep.setText(tot+"/990");
 		try {
@@ -88,18 +98,16 @@ public class FinDeToeicController implements Initializable{
                 		preparedStatement.setString(2, FXMLDocumentController.mdp());
                 		resultSet3 = preparedStatement.executeQuery();
                 		if(resultSet3.next()) {
-                			String sql2 = "SELECT ReponseE,NumQuestion FROM Repondre WHERE Repondre.idUtilisateur = ? ";
-                			preparedStatement = connection.prepareStatement(sql2);
-                			preparedStatement.setInt(1,resultSet3.getInt(1));
-                			resultSet4 = preparedStatement.executeQuery();
-                			while(resultSet4.next()) {
-                				String sql4 = "SELECT CorrectionQuestion FROM Question WHERE Question.NumTOEIC = ? AND Question.NumQuestion = ?";
-                				preparedStatement = connection.prepareStatement(sql4);
-                				preparedStatement.setInt(1, resultSet.getInt(1));
-                				preparedStatement.setInt(2, resultSet4.getInt(2));
-                				resultSet5 = preparedStatement.executeQuery();
-                				
-                    		}
+                			for(int i = 1; i <= 7; i++) {
+                				String sql2 = "INSERT INTO Notes (NumPart,NumTOEIC,idUtilisateur,Notes,Date) VALUES(?,?,?,?,?)";
+                				preparedStatement = connection.prepareStatement(sql2);
+                				preparedStatement.setInt(1, i);
+                				preparedStatement.setInt(2, resultSet.getInt(1));
+                				preparedStatement.setInt(3, resultSet3.getInt(1));
+                				preparedStatement.setInt(4, pS.get(i-1));
+                				preparedStatement.setDate(5, resultSet1.getDate(1));
+                				preparedStatement.executeUpdate();
+                			}
                 			
                 		}
 					}
