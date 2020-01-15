@@ -150,7 +150,7 @@ public class GérerLesTOEICScreenController implements Initializable{
 			catch(Exception e){
 				e.printStackTrace();
 			}
-			String prog = "SELECT Date, FiliereEtAnnee,NumTOEIC FROM Programmer";			
+			String prog = "SELECT Date, FiliereEtAnnee,NumTOEIC FROM Programmer ORDER BY Date";			
 			try {
 				preparedStatement = connection.prepareStatement(prog);
 				resultSet = preparedStatement.executeQuery();

@@ -25,8 +25,7 @@
    <children>
       <GridPane alignment="CENTER" prefHeight="132.0" prefWidth="1280.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="793.0" minWidth="10.0" prefWidth="793.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="635.0" minWidth="10.0" prefWidth="487.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1085.0" minWidth="10.0" prefWidth="1085.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -34,7 +33,7 @@
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label text="Mon Bulletin" textAlignment="CENTER" textFill="WHITE">
+                  <Label prefHeight="73.0" prefWidth="1081.0" text="Bulletin de l'étudiant " textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="50.0" />
                      </font>
@@ -67,7 +66,7 @@
                      <children>
                         <Button mnemonicParsing="false" onAction="#Home" prefHeight="62.0" prefWidth="37.0" style="-fx-background-color: transparent;">
                            <graphic>
-                              <ImageView fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: ;">
+                              <ImageView fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity:1 ;">
                                  <image>
                                     <Image url="@../../../images/Commun/home.png" />
                                  </image>
@@ -85,13 +84,13 @@
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints maxHeight="163.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="283.0" minHeight="10.0" prefHeight="282.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="163.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="326.0" minHeight="10.0" prefHeight="326.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <HBox alignment="CENTER" prefHeight="133.0" prefWidth="1280.0">
                <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Voici le détail de vos résultats depuis votre inscription à l'application :" wrappingWidth="820.40673828125">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Voici le détail des résultats depuis votre inscription à l'application :" wrappingWidth="820.40673828125">
                      <font>
                         <Font name="System Italic" size="25.0" />
                      </font>
@@ -100,23 +99,536 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
-                  <TableView prefHeight="298.0" prefWidth="880.0" style="-fx-background-color: grey;">
-                    <columns>
-                      <TableColumn prefWidth="108.0" text="Nom TOEIC" />
-                      <TableColumn prefWidth="92.0" text="Date" />
-                        <TableColumn prefWidth="75.0" text="Partie 1" />
-                        <TableColumn prefWidth="75.0" text="Partie 2" />
-                        <TableColumn prefWidth="75.0" text="Partie 3" />
-                        <TableColumn prefWidth="75.0" text="Partie 4" />
-                        <TableColumn prefWidth="75.0" text="Partie 5" />
-                        <TableColumn prefWidth="75.0" text="Partie 6" />
-                        <TableColumn prefWidth="75.0" text="Partie 7" />
-                        <TableColumn prefWidth="154.0" text="Note finale /990" />
-                    </columns>
-                  </TableView>
-                  <Slider orientation="VERTICAL" rotate="180.0" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="283.0" prefWidth="129.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom TOEIC" textAlignment="CENTER" wrappingWidth="213.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="nom1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="213.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="nom2" fill="WHITE" layoutX="10.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="213.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="nom3" fill="WHITE" layoutX="10.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="213.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="nom4" fill="WHITE" layoutX="10.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="213.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="nom5" fill="WHITE" layoutX="10.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="213.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="nom6" fill="WHITE" layoutX="10.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="213.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="nom7" fill="WHITE" layoutX="10.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="213.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="nom8" fill="WHITE" layoutX="10.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="213.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="283.0" prefWidth="123.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" textAlignment="CENTER" wrappingWidth="139.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Date1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="Date11" fill="WHITE" layoutX="12.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Date111" fill="WHITE" layoutX="12.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Date1111" fill="WHITE" layoutX="12.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Date11111" fill="WHITE" layoutX="12.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Date111111" fill="WHITE" layoutX="12.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Date1111111" fill="WHITE" layoutX="12.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Date11111111" fill="WHITE" layoutX="12.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="283.0" prefWidth="113.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Partie 1" textAlignment="CENTER" wrappingWidth="98.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie11" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="Partie12" fill="WHITE" layoutX="11.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie13" fill="WHITE" layoutX="11.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie14" fill="WHITE" layoutX="11.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie15" fill="WHITE" layoutX="11.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie16" fill="WHITE" layoutX="11.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie17" fill="WHITE" layoutX="11.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie18" fill="WHITE" layoutX="11.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Partie 2" textAlignment="CENTER" wrappingWidth="98.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie21" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="Partie22" fill="WHITE" layoutX="11.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie23" fill="WHITE" layoutX="11.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie24" fill="WHITE" layoutX="11.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie25" fill="WHITE" layoutX="11.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie26" fill="WHITE" layoutX="11.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie27" fill="WHITE" layoutX="11.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie28" fill="WHITE" layoutX="11.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Partie 3" textAlignment="CENTER" wrappingWidth="98.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie31" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="Partie32" fill="WHITE" layoutX="11.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie33" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie34" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie35" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie36" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie37" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie38" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Partie 4" textAlignment="CENTER" wrappingWidth="98.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie41" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="Partie42" fill="WHITE" layoutX="11.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie43" fill="WHITE" layoutX="11.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie44" fill="WHITE" layoutX="11.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie45" fill="WHITE" layoutX="11.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie46" fill="WHITE" layoutX="11.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie47" fill="WHITE" layoutX="11.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie48" fill="WHITE" layoutX="11.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Partie 5" textAlignment="CENTER" wrappingWidth="98.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie51" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="Partie52" fill="WHITE" layoutX="11.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie53" fill="WHITE" layoutX="11.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie54" fill="WHITE" layoutX="11.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie55" fill="WHITE" layoutX="11.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie56" fill="WHITE" layoutX="11.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie57" fill="WHITE" layoutX="11.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie58" fill="WHITE" layoutX="11.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Partie 6" textAlignment="CENTER" wrappingWidth="98.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie61" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="Partie62" fill="WHITE" layoutX="11.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie63" fill="WHITE" layoutX="11.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie64" fill="WHITE" layoutX="11.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie65" fill="WHITE" layoutX="11.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie66" fill="WHITE" layoutX="11.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie67" fill="WHITE" layoutX="11.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie68" fill="WHITE" layoutX="11.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Partie 7" textAlignment="CENTER" wrappingWidth="99.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie71" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="Partie72" fill="WHITE" layoutX="12.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie73" fill="WHITE" layoutX="12.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie74" fill="WHITE" layoutX="12.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie75" fill="WHITE" layoutX="12.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie76" fill="WHITE" layoutX="12.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie77" fill="WHITE" layoutX="12.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Partie78" fill="WHITE" layoutX="12.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="96.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Total /990" textAlignment="CENTER" wrappingWidth="139.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Score1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="124.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="Score2" fill="WHITE" layoutX="18.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="124.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Score3" fill="WHITE" layoutX="18.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="124.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Score4" fill="WHITE" layoutX="18.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="124.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Score5" fill="WHITE" layoutX="18.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="124.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Score6" fill="WHITE" layoutX="18.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="124.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Score7" fill="WHITE" layoutX="18.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="124.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="Score8" fill="WHITE" layoutX="18.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="124.40673828125">
+                                 <font>
+                                    <Font name="System Italic" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
                </children>
             </HBox>
+            <VBox alignment="TOP_CENTER" prefHeight="109.0" prefWidth="1280.0" />
          </children>
       </GridPane>
    </children>

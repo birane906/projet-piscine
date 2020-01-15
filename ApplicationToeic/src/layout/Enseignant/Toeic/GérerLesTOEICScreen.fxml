@@ -59,7 +59,7 @@
                      <children>
                         <Button mnemonicParsing="false" onAction="#Home" prefHeight="62.0" prefWidth="37.0" style="-fx-background-color: transparent;">
                            <graphic>
-                              <ImageView fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: ;">
+                              <ImageView fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity:1 ;">
                                  <image>
                                     <Image url="@../../../images/Commun/home.png" />
                                  </image>
