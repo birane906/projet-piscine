@@ -10,6 +10,7 @@ import enJava.fichiers.Controller.Login.FXMLDocumentController;
 public class CalculNote {
 	
 	static Connection connection = null;
+	
 	static PreparedStatement preparedStatement = null;
     static ResultSet resultSet = null;
     static ResultSet resultSet1 = null;
