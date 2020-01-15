@@ -90,30 +90,37 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <HBox alignment="TOP_CENTER" prefHeight="110.0" prefWidth="297.0">
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                            <children>
-                              <Label text="Filière :" textFill="WHITE">
+                              <HBox alignment="CENTER" prefHeight="112.0" prefWidth="297.0">
+                                 <children>
+                                    <Label text="Filière :" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ChoiceBox fx:id="choixPromo" prefWidth="150.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <Button mnemonicParsing="false" onAction="#AfficherStats" style="-fx-background-color: blue; -fx-border-color: white;" text="Afficher ses stats" textFill="WHITE">
                                  <font>
-                                    <Font name="System Bold" size="20.0" />
+                                    <Font name="System Bold" size="19.0" />
                                  </font>
-                                 <HBox.margin>
-                                    <Insets right="20.0" />
-                                 </HBox.margin>
-                              </Label>
-                              <ChoiceBox fx:id="choixPromo" prefWidth="150.0" />
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" top="35.0" />
+                                 </VBox.margin>
+                              </Button>
                            </children>
                            <VBox.margin>
-                              <Insets top="30.0" />
+                              <Insets top="16.0" />
                            </VBox.margin>
-                        </HBox>
-                        <Button mnemonicParsing="false" onAction="#AfficherStats" style="-fx-background-color: blue; -fx-border-color: white;" text="Afficher ses stats" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="19.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets bottom="25.0" top="35.0" />
-                           </VBox.margin>
-                        </Button>
+                        </VBox>
                      </children>
                   </VBox>
                </children>
@@ -136,7 +143,7 @@
                      <children>
                         <Button mnemonicParsing="false" onAction="#Home" prefHeight="62.0" prefWidth="37.0" style="-fx-background-color: transparent;">
                            <graphic>
-                              <ImageView fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: ;">
+                              <ImageView fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 1;">
                                  <image>
                                     <Image url="@../../../images/Commun/home.png" />
                                  </image>
@@ -184,12 +191,12 @@
                               </Button>
                            </children>
                         </HBox>
-                        <LineChart id="ToeicScoreEvolution" prefHeight="288.0" prefWidth="537.0" style="-fx-background-color: white; -fx-border-color: black;" title="Evolution des scores au Toeic par date">
+                        <LineChart id="ToeicScoreEvolution" prefHeight="288.0" prefWidth="537.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-style: dashed solid;" title="Evolution général de l'étudiant">
                           <xAxis>
                             <CategoryAxis id="xToeicScoreEv" label="Date Toeic" side="BOTTOM" />
                           </xAxis>
                           <yAxis>
-                            <NumberAxis id="yToeicScoreEv" label="Score Toeic" side="LEFT" />
+                            <NumberAxis id="yToeicScoreEv" label="Score" lowerBound="10.0" side="LEFT" upperBound="990.0" />
                           </yAxis>
                            <VBox.margin>
                               <Insets left="20.0" right="20.0" top="30.0" />
