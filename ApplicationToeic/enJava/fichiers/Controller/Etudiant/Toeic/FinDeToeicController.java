@@ -13,7 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
-import javafx.scene.control.ToggleGroup;
+
 import javafx.stage.Stage;
 import enJava.fichiers.Config.ConnectionUtil;
 import enJava.fichiers.Controller.Login.FXMLDocumentController;
@@ -50,6 +50,16 @@ public class FinDeToeicController implements Initializable{
         }
 	}
 	
+	public void Détails(ActionEvent event) {
+		try {
+			Node node = (Node)event.getSource();
+            dialogStage = (Stage) node.getScene().getWindow();
+            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../../src/layout/Etudiant/Statistiques/RécapDernierTOEICEtudiantScreen.fxml")));
+		}
+		catch(Exception e){
+            e.printStackTrace();
+        }
+	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

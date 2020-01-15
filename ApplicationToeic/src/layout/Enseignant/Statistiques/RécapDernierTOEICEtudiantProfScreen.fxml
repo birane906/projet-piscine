@@ -271,6 +271,9 @@
                </HBox.margin>
             </VBox>
          </children>
+         <GridPane.margin>
+            <Insets top="20.0" />
+         </GridPane.margin>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
          <children>
@@ -284,14 +287,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <HBox alignment="CENTER" prefHeight="202.0" prefWidth="603.0" GridPane.columnIndex="1">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="410.0" style="-fx-background-color: #51c549; -fx-border-color: white;" text="Télécharger sa grille réponse" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="25.0" />
-                           </font></Button>
-                     </children>
-                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="202.0" prefWidth="603.0" GridPane.columnIndex="1" />
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                      <children>
                         <Button mnemonicParsing="false" onAction="#Home" prefHeight="62.0" prefWidth="37.0" style="-fx-background-color: transparent;">
@@ -305,15 +301,7 @@
                         </Button>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous pouvez aussi générer la fiche de réponses de l'étudiant corrigée :" textAlignment="JUSTIFY" wrappingWidth="416.6708984375">
-                           <font>
-                              <Font size="25.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
                </children>
             </GridPane>
          </children>

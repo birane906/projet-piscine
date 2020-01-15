@@ -24,7 +24,16 @@ public class PasDeTOEICProgController implements Initializable {
         }
 	}
 
-	
+	public void Contact(ActionEvent event) {
+		try {
+			Node node = (Node)event.getSource();
+            dialogStage = (Stage) node.getScene().getWindow();
+            dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../../src/layout/Etudiant/InfosEnseignants/ContactEnseignant.fxml")));
+		}
+		catch(Exception e){
+            e.printStackTrace();
+        }
+	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub

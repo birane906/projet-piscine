@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.GridPane?>
 
-<GridPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #2D3447;" stylesheets="@../../../../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="enJava.fichiers.Controller.Etudiant.Toeic.QuestionnaireController5">
+<GridPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #1D47B4;" stylesheets="@../../../../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="enJava.fichiers.Controller.Etudiant.Toeic.QuestionnaireController5">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -21,9 +21,9 @@
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Writing Part - Subpart 5" textFill="WHITE">
+            <Label text="Partie Ecrite - Partie 5" textFill="WHITE">
                <font>
-                  <Font size="31.0" />
+                  <Font name="System Bold" size="31.0" />
                </font>
             </Label>
          </children>
@@ -361,7 +361,10 @@
             <VBox alignment="BOTTOM_LEFT" prefHeight="129.0" prefWidth="472.0" HBox.hgrow="ALWAYS" />
             <VBox alignment="BOTTOM_RIGHT" prefHeight="129.0" prefWidth="473.0" HBox.hgrow="ALWAYS">
                <children>
-                  <Button mnemonicParsing="false" onAction="#next" prefHeight="50.0" prefWidth="250.0" style="-fx-border-color: white; -fx-background-color: green;" text="Go to the next subpart" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#next" prefHeight="50.0" prefWidth="250.0" style="-fx-border-color: white; -fx-background-color: green;" text="Partie Suivante" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></Button>
                </children>
             </VBox>
          </children>

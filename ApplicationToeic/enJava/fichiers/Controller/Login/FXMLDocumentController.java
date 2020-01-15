@@ -55,7 +55,6 @@ public class FXMLDocumentController implements Initializable {
             if(!resultSet.next()){
                 infoBox("Veuillez entrer un identifiant et une adresse correcte", null, "Failed");
             }else{
-                infoBox("Connexion effectuée !",null,"Success" );
                 Node node = (Node)event.getSource();
                 dialogStage = (Stage) node.getScene().getWindow();
                 //dialogStage.close();

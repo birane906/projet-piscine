@@ -260,7 +260,7 @@ public class RésultatsEtudiantVueProfScreenController implements Initializable {
 	}
 
 		
-		// Bouton pour voir le recap du dernier TOEIC passé
+	// Bouton pour voir le recap du dernier TOEIC passé
 	public void Recap(ActionEvent event) {
 		try {
 			String NomE = nomEtu.getText().toString();

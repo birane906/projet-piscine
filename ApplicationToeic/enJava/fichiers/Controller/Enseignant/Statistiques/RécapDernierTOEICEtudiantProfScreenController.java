@@ -237,15 +237,15 @@ public class RécapDernierTOEICEtudiantProfScreenController implements Initializa
 	        	}
 	        	if(resultSet.getInt(1) == 5) {
 	        		P5.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-	        		noteE = noteO + resultSet.getInt(2);
+	        		noteE = noteE + resultSet.getInt(2);
 	        	}
 	        	if(resultSet.getInt(1) == 6) {
 	        		P6.setText(Integer.toString(resultSet.getInt(2))+" / 16");
-	        		noteE = noteO + resultSet.getInt(2);
+	        		noteE = noteE + resultSet.getInt(2);
 	        	}
 	        	if(resultSet.getInt(1) == 7) {
 	        		P7.setText(Integer.toString(resultSet.getInt(2))+" / 54");
-	        		noteE = noteO + resultSet.getInt(2);
+	        		noteE = noteE + resultSet.getInt(2);
 	        	}
 	       }
 	        ScoreOral.setText("("+Integer.toString(noteO)+ " / 100)");

@@ -14,21 +14,21 @@
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="265.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="234.0" minHeight="10.0" prefHeight="128.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="282.0" minHeight="10.0" prefHeight="196.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="332.0" minHeight="10.0" prefHeight="325.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="229.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="282.0" minHeight="10.0" prefHeight="166.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.rowIndex="1">
+      <HBox alignment="CENTER" prefHeight="229.0" prefWidth="1155.0" spacing="15.0" GridPane.rowIndex="1">
          <children>
             <VBox alignment="TOP_CENTER" prefHeight="108.0" prefWidth="135.0" spacing="50.0">
                <children>
-                  <Label text="E Mail" textFill="#fffbfb">
+                  <Label text="E-Mail :" textFill="#fffbfb">
                      <VBox.margin>
                         <Insets right="40.0" top="5.0" />
                      </VBox.margin>
                   </Label>
-                  <Label text="Mot de Passe" textFill="WHITE">
+                  <Label text="Mot de Passe :" textFill="WHITE">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
@@ -51,14 +51,14 @@
             </VBox>
          </children>
          <GridPane.margin>
-            <Insets right="160.0" />
+            <Insets left="50.0" right="160.0" />
          </GridPane.margin>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
             <Label text="TOEIC Polytech" textFill="WHITE">
                <font>
-                  <Font size="50.0" />
+                  <Font name="System Bold" size="75.0" />
                </font>
             </Label>
          </children>

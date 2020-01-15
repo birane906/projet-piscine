@@ -12,7 +12,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #0243E9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #0243E9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="enJava.fichiers.Controller.Etudiant.Statistiques.RécapDernierTOEICEtudiantScreenController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -24,7 +24,7 @@
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Voici le récapitulatif du score obtenu au dernier TOEIC" wrappingWidth="1204.29296875">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Voici le récapitulatif de votre score obtenu au dernier TOEIC" wrappingWidth="1204.29296875">
                <font>
                   <Font name="System Bold" size="50.0" />
                </font>
@@ -33,28 +33,247 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
          <children>
-            <VBox prefHeight="200.0" prefWidth="100.0">
+            <VBox prefHeight="335.0" prefWidth="1040.0">
                <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Score total : xxx/975 (yyy/200)" textAlignment="JUSTIFY" wrappingWidth="1077.6708984375">
-                     <font>
-                        <Font size="25.0" />
-                     </font>
-                  </Text>
-                  <TableView prefHeight="308.0" prefWidth="1094.0">
-                    <columns>
-                      <TableColumn prefWidth="542.0" text="Score Partie Orale : xxx / 495 (yyy/100)" />
-                      <TableColumn minWidth="0.0" prefWidth="535.0" text="Score Partie Ecrite : xxx / 495 (yyy/100)" />
-                    </columns>
-                     <VBox.margin>
-                        <Insets top="20.0" />
-                     </VBox.margin>
-                  </TableView>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Score total : " textAlignment="JUSTIFY" wrappingWidth="137.6708984375">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="Score" fill="WHITE" layoutX="10.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="155.6708984375">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fx:id="ScoreTotal" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="155.6708984375">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="242.0" prefWidth="1035.0">
+                     <children>
+                        <VBox prefHeight="239.0" prefWidth="520.0">
+                           <children>
+                              <HBox prefHeight="32.0" prefWidth="520.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Score Partie Orale :" textAlignment="JUSTIFY" wrappingWidth="216.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="ScoreOr" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="118.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="ScoreOral" fill="WHITE" layoutX="232.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="118.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="28.0" prefWidth="520.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sous-Partie 1 :" textAlignment="JUSTIFY" wrappingWidth="162.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="P1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="118.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                                 <padding>
+                                    <Insets top="30.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="28.0" prefWidth="520.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sous-Partie 2 :" textAlignment="JUSTIFY" wrappingWidth="162.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="P2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="118.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="28.0" prefWidth="520.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sous-Partie 3 :" textAlignment="JUSTIFY" wrappingWidth="162.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="P3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="118.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="28.0" prefWidth="520.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sous-Partie 4 :" textAlignment="JUSTIFY" wrappingWidth="162.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="P4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="118.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="239.0" prefWidth="520.0">
+                           <children>
+                              <HBox prefHeight="34.0" prefWidth="520.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Score Partie Ecrite :" textAlignment="JUSTIFY" wrappingWidth="216.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="ScoreEcr" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="118.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="ScoreEcrit" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="118.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="28.0" prefWidth="520.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sous-Partie 5 :" textAlignment="JUSTIFY" wrappingWidth="162.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="P5" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="118.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="28.0" prefWidth="520.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sous-Partie 6 :" textAlignment="JUSTIFY" wrappingWidth="162.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="P6" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="118.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="28.0" prefWidth="520.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sous-Partie 7 :" textAlignment="JUSTIFY" wrappingWidth="162.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Text fx:id="P7" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="118.6708984375">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
                </children>
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </VBox>
          </children>
+         <GridPane.margin>
+            <Insets top="20.0" />
+         </GridPane.margin>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
          <children>
@@ -68,19 +287,12 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <HBox alignment="CENTER" prefHeight="202.0" prefWidth="603.0" GridPane.columnIndex="1">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="410.0" style="-fx-background-color: #51c549; -fx-border-color: white;" text="Télécharger ma grille réponse" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="25.0" />
-                           </font></Button>
-                     </children>
-                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="202.0" prefWidth="603.0" GridPane.columnIndex="1" />
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="37.0" style="-fx-background-color: transparent;">
+                        <Button mnemonicParsing="false" onAction="#Home" prefHeight="62.0" prefWidth="37.0" style="-fx-background-color: transparent;">
                            <graphic>
-                              <ImageView fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: ;">
+                              <ImageView fx:id="Home" fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: ;">
                                  <image>
                                     <Image url="@../../../images/Commun/home.png" />
                                  </image>
@@ -89,15 +301,7 @@
                         </Button>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous pouvez aussi générer votre fiche de réponses corrigée :" textAlignment="JUSTIFY" wrappingWidth="416.6708984375">
-                           <font>
-                              <Font size="25.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
                </children>
             </GridPane>
          </children>
