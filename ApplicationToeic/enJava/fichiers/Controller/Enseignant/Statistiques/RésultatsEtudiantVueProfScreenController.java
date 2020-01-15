@@ -348,9 +348,10 @@ public class RésultatsEtudiantVueProfScreenController implements Initializable {
 			}
 		}
 		catch(Exception e){
-	           e.printStackTrace();
+			e.printStackTrace();
 		}
 	}
+
 	
 	public static void infoBox(String infoMessage, String headerText, String title){
         Alert alert = new Alert(AlertType.CONFIRMATION);
