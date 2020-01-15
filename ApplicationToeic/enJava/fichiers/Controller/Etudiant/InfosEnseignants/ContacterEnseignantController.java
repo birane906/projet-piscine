@@ -1,4 +1,4 @@
-package enJava.fichiers.Controller.Etudiant.Toeic;
+package enJava.fichiers.Controller.Etudiant.InfosEnseignants;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -9,8 +9,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.stage.Stage;
 
-public class PasDeTOEICProgController implements Initializable {
-	
+public class ContacterEnseignantController implements Initializable {
+
 	Stage dialogStage = new Stage();
 
 	public void Home(ActionEvent event) {
@@ -23,11 +23,11 @@ public class PasDeTOEICProgController implements Initializable {
             e.printStackTrace();
         }
 	}
-
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		
 	}
+
 }

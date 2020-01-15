@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 public class DémarrerTOEICController implements Initializable{
 	
 	Stage dialogStage = new Stage();
+	
 
 	public void Home(ActionEvent event) {
 		try {
