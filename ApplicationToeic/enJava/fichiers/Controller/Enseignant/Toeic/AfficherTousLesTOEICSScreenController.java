@@ -7,15 +7,22 @@ import java.sql.ResultSet;
 import java.util.ResourceBundle;
 import enJava.fichiers.Config.ConnectionUtil;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 public class AfficherTousLesTOEICSScreenController implements Initializable{
 
 Stage dialogStage = new Stage();
 	
+	@FXML
+	ChoiceBox<String> choixTOEIC;
+
 	Connection connection = null;
 	PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
@@ -59,10 +66,88 @@ Stage dialogStage = new Stage();
 	    }
 	}
 	
+	// Bouton supprimer
+	public void Supprimer(ActionEvent event) {
+		String nomTOEIC = (String) choixTOEIC.getValue();
+		if(nomTOEIC != null) {
+			String numTO = "SELECT NumTOEIC FROM Toeic WHERE LibelleTOEIC = ?";
+			
+			try {
+				preparedStatement = connection.prepareStatement(numTO);
+				preparedStatement.setString(1, nomTOEIC);
+				resultSet = preparedStatement.executeQuery();
+				if (resultSet.next()) {
+					int numTOEIC = resultSet.getInt(1);
+					
+					String del = "DELETE FROM Question WHERE NumTOEIC = ?";
+					
+					preparedStatement = connection.prepareStatement(del);
+					preparedStatement.setInt(1, numTOEIC);
+					preparedStatement.executeUpdate();
+							
+											
+					del = "DELETE FROM Notes WHERE NumTOEIC = ?";
+					
+					preparedStatement = connection.prepareStatement(del);
+					preparedStatement.setInt(1, numTOEIC);
+					preparedStatement.executeUpdate();
+					
+					del = "DELETE FROM Programmer WHERE NumTOEIC = ?";
+					
+					preparedStatement = connection.prepareStatement(del);
+					preparedStatement.setInt(1, numTOEIC);
+					preparedStatement.executeUpdate();
+					
+					del = "DELETE FROM Passer WHERE NumTOEIC = ?";
+					
+					preparedStatement = connection.prepareStatement(del);
+					preparedStatement.setInt(1, numTOEIC);
+					preparedStatement.executeUpdate();
+					
+					del = "DELETE FROM Toeic WHERE NumTOEIC = ?";
+					
+					preparedStatement = connection.prepareStatement(del);
+					preparedStatement.setInt(1, numTOEIC);
+					preparedStatement.executeUpdate();
+					
+					infoBox("Ce TOEIC a été supprimé avec succès.", null, "Succès");
+
+				}
+				else {
+					infoBox("TOEIC déjà supprimé, sélectionnez-en un autre à supprimer.", null, "Erreur");
+				}
+			}
+			catch(Exception e){
+				e.printStackTrace();
+		    }
+		}
+		else {
+			infoBox("Veuillez d'abord sélectionner un TOEIC à supprimer.", null, "Erreur");
+		}
+	}
+	
+	public static void infoBox(String infoMessage, String headerText, String title){
+        Alert alert = new Alert(AlertType.CONFIRMATION);
+        alert.setContentText(infoMessage);
+        alert.setTitle(title);
+        alert.setHeaderText(headerText);
+        alert.showAndWait();
+    }
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-		
+		// On initialise la choice box des promos
+		String toeic = "SELECT LibelleTOEIC FROM Toeic";
+		try {
+			preparedStatement = connection.prepareStatement(toeic);
+			resultSet = preparedStatement.executeQuery();
+			while (resultSet.next()) {
+				choixTOEIC.getItems().add(resultSet.getString(1));
+			}
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 
 }

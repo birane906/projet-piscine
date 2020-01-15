@@ -21,11 +21,24 @@ import javafx.stage.Stage;
 public class GérerLesEtudiantsScreenController implements Initializable{
 
 	@FXML
-	ChoiceBox<String> choixPromo;
+	private ChoiceBox<String> choixPromo;
 	@FXML
 	private TextField nomEtu;
 	@FXML
 	private TextField prenomEtu;
+	
+	static String nom;
+	static String prenom;
+	
+	public static String nom() {
+    	
+    	return nom;
+    }
+    
+    public static String prenom() {
+    	
+    	return prenom;
+    }
 	
 	Stage dialogStage = new Stage();
 	
@@ -69,6 +82,8 @@ public class GérerLesEtudiantsScreenController implements Initializable{
 			if(NomE != null) {
 				if(PrenomE != null) {
 					if(PromoE != null){
+						nom = nomEtu.getText().toString();
+						prenom = prenomEtu.getText().toString();
 						String etu = "SELECT COUNT(*),idUtilisateur FROM Utilisateur WHERE NomUtilisateur = ? AND PrenomUtilisateur = ? AND FiliereEtAnnee = ?";
 					
 						try {
@@ -119,18 +134,18 @@ public class GérerLesEtudiantsScreenController implements Initializable{
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// On initialise la choice box des participants et des promos
-				String participant = "SELECT FiliereEtAnnee FROM Filiere WHERE FiliereEtAnnee <> 'Enseignant'";
-				try {
-					preparedStatement = connection.prepareStatement(participant);
-					resultSet = preparedStatement.executeQuery();
-					while (resultSet.next()) {
-					    choixPromo.getItems().add(resultSet.getString(1));
-					}
-				}
-				catch(Exception e){
-					e.printStackTrace();
-				}
+		// On initialise la choice box des promos
+		String participant = "SELECT FiliereEtAnnee FROM Filiere WHERE FiliereEtAnnee <> 'Enseignant'";
+		try {
+			preparedStatement = connection.prepareStatement(participant);
+			resultSet = preparedStatement.executeQuery();
+			
+			while (resultSet.next()) {
+				choixPromo.getItems().add(resultSet.getString(1));
+			}
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
 	}
-
 }

@@ -79,13 +79,7 @@ public class RésultatsEtudiantVueProfScreenController implements Initializable {
 			            		infoBox("Il n'existe pas d'étudiant ayant ces informations, veuillez réessayer.", null,"Erreur");
 			            	}
 			            	else {
-			            		FXCollections.<String>observableArrayList() 
-			            		idU = resultSet.getInt(2);
 				            	infoBox("On a bien récolté le bon étudiant "+ Integer.toString(idU), null,"Bravo");
-				            	
-				            	xToeicScoreEv = new CategoryAxis();
-				            	xToeicScoreEv.setCategories(FXCollections.<String>observableArrayList());
-				            	ToeicScoreEvolution = new LineChart<CategoryAxis, NumberAxis>(null, null);
 			            	}
 			            }
 					}

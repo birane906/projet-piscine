@@ -680,7 +680,7 @@ public class CréerUnTOEICScreenController implements Initializable {
             	            	// On fait d'abord une requête permettant d'avoir le num TOEIC
             	            	int numTOEIC = 1;
             	            	Boolean rep = false;
-            	            	// On va chercher le premier NumTOEIC disponible en partant de 0
+            	            	// On va chercher le premier NumTOEIC disponible en partant de 1
             	            	while (!rep) {
             	            		String test ="SELECT COUNT(*) FROM Toeic WHERE NumTOEIC = ?";
             	            		preparedStatement = connection.prepareStatement(test);
