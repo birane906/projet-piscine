@@ -6,14 +6,19 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import enJava.fichiers.Config.ConnectionUtil;
 import enJava.fichiers.Controller.Login.FXMLDocumentController;
@@ -26,6 +31,12 @@ import enJava.fichiers.Controller.Login.FXMLDocumentController;
 public class QuestionnaireController5 implements Initializable {
 
 	Stage dialogStage = new Stage();
+	Timer timer = new Timer();
+	int m1=QuestionnaireController4.minutes();
+	int s1=QuestionnaireController4.secondes();
+	
+	@FXML
+	Text chrono;
 	
 	Connection connection = null;
 	PreparedStatement preparedStatement = null;
@@ -109,6 +120,7 @@ public class QuestionnaireController5 implements Initializable {
                 	sql4 = "SELECT * FROM Repondre WHERE Repondre.idUtilisateur = ? AND Repondre.NumPart = ? AND Repondre.NumQuestion = ?";
             	}
             }
+            timer.cancel();
             Node node = (Node)event.getSource();
         	dialogStage = (Stage) node.getScene().getWindow();
         	dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../../src/layout/Etudiant/Toeic/FXMLQuestionnaire6.fxml")));
@@ -117,8 +129,32 @@ public class QuestionnaireController5 implements Initializable {
             e.printStackTrace();
         }
 	}
-	
-	
+    
+    public void startCountDown() {
+    	
+        timer.schedule(new TimerTask() {
+        @Override
+            public void run() {
+            Platform.runLater(new Runnable() {
+               public void run() {
+            	   if(s1==0) {
+            		   QuestionnaireController4.setSecondes(59);
+            		   QuestionnaireController4.setMinutes(m1-1);
+            		   m1=QuestionnaireController4.minutes();
+                       s1=QuestionnaireController4.secondes();
+            	   }
+                    chrono.setText("Temps Restant:" + m1 + ":" + s1);
+                    QuestionnaireController4.setSecondes(s1-1);
+                    m1=QuestionnaireController4.minutes();
+                    s1=QuestionnaireController4.secondes();
+
+                    if (m1 == 0 && s1 == 0)
+                        timer.cancel();
+              }
+            });
+        }
+        }, 1000, 1000); //Every 1 second
+    }
 	
 	
     @Override
@@ -311,6 +347,8 @@ public class QuestionnaireController5 implements Initializable {
     	catch(Exception e){
             e.printStackTrace();
         }
+    	startCountDown();
 	}
+    
 	
 }

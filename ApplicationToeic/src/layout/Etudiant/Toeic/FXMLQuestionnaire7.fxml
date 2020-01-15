@@ -19,15 +19,16 @@
     <RowConstraints maxHeight="555.0" minHeight="10.0" prefHeight="179.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
          <children>
             <Label text="Partie Ecrite - Partie 7" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="31.0" />
                </font>
             </Label>
+            <Text fx:id="chrono" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" />
          </children>
-      </HBox>
+      </VBox>
       <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
          <opaqueInsets>
             <Insets />

@@ -6,7 +6,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,7 +24,6 @@ import enJava.fichiers.Controller.Login.FXMLDocumentController;
 public class QuestionnaireController4 implements Initializable {
 
 	Stage dialogStage = new Stage();
-	
 	Connection connection = null;
 	PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
@@ -33,6 +35,8 @@ public class QuestionnaireController4 implements Initializable {
     private ToggleGroup q92,q93,q94,q95,q96,q97,q98,q99,q100;
     
     private ArrayList<ToggleGroup> listeTog1 = new ArrayList<ToggleGroup>();
+    
+    static Temps timer=new Temps(75,0);
     
     @FXML
     RadioButton A71,A72,A73,A74,A75,A76,A77,A78,A79,A80,A81,A82,A83,A84,A85,A86,A87,A88,A89,A90,A91,A92,A93,A94,A95,A96,A97,A98,A99,A100;
@@ -175,7 +179,7 @@ public class QuestionnaireController4 implements Initializable {
         }
 	}
 	
-	
+    
 	
 	
     @Override
@@ -369,6 +373,28 @@ public class QuestionnaireController4 implements Initializable {
             e.printStackTrace();
         }
 	}
+    
 
+    public static int minutes() {
+    	return timer.getMin();
+    }
+    
+    public static int secondes() {
+    	return timer.getSec();
+    }
+    
+    public static void setMinutes(int x) {
+    	timer.setMin(x);
+    }
+    public static void setSecondes(int y) {
+    	timer.setSec(y);
+    }
+    
+
+
+	public static int getSec() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }
