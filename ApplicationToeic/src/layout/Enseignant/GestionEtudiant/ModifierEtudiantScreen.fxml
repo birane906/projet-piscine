@@ -127,11 +127,7 @@
                      <children>
                         <Button mnemonicParsing="false" onAction="#Home" prefHeight="62.0" prefWidth="37.0" style="-fx-background-color: transparent;">
                            <graphic>
-<<<<<<< HEAD
-                              <ImageView fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 1 ;">
-=======
                               <ImageView fitHeight="80.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 1;">
->>>>>>> branch 'master' of https://github.com/guiguie34/Projet-PISCINE
                                  <image>
                                     <Image url="@../../../images/Commun/home.png" />
                                  </image>
