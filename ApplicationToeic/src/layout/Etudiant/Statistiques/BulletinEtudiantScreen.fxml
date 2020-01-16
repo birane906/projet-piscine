@@ -153,58 +153,6 @@
                               </Text>
                            </children>
                         </VBox>
-                        <VBox alignment="TOP_CENTER" prefHeight="283.0" prefWidth="123.0">
-                           <children>
-                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" textAlignment="CENTER" wrappingWidth="139.40673828125">
-                                 <font>
-                                    <Font name="System Italic" size="25.0" />
-                                 </font>
-                              </Text>
-                              <Text fx:id="Date1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
-                                 <font>
-                                    <Font name="System Italic" size="25.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets top="10.0" />
-                                 </VBox.margin>
-                              </Text>
-                              <Text fx:id="Date11" fill="WHITE" layoutX="12.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
-                                 <font>
-                                    <Font name="System Italic" size="25.0" />
-                                 </font>
-                              </Text>
-                              <Text fx:id="Date111" fill="WHITE" layoutX="12.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
-                                 <font>
-                                    <Font name="System Italic" size="25.0" />
-                                 </font>
-                              </Text>
-                              <Text fx:id="Date1111" fill="WHITE" layoutX="12.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
-                                 <font>
-                                    <Font name="System Italic" size="25.0" />
-                                 </font>
-                              </Text>
-                              <Text fx:id="Date11111" fill="WHITE" layoutX="12.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
-                                 <font>
-                                    <Font name="System Italic" size="25.0" />
-                                 </font>
-                              </Text>
-                              <Text fx:id="Date111111" fill="WHITE" layoutX="12.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
-                                 <font>
-                                    <Font name="System Italic" size="25.0" />
-                                 </font>
-                              </Text>
-                              <Text fx:id="Date1111111" fill="WHITE" layoutX="12.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
-                                 <font>
-                                    <Font name="System Italic" size="25.0" />
-                                 </font>
-                              </Text>
-                              <Text fx:id="Date11111111" fill="WHITE" layoutX="12.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="136.40673828125">
-                                 <font>
-                                    <Font name="System Italic" size="25.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </VBox>
                         <VBox alignment="TOP_CENTER" prefHeight="283.0" prefWidth="113.0">
                            <children>
                               <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Partie 1" textAlignment="CENTER" wrappingWidth="98.40673828125">

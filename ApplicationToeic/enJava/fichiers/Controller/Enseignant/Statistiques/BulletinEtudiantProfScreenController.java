@@ -11,6 +11,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -32,23 +34,6 @@ public class BulletinEtudiantProfScreenController implements Initializable {
 	Text nom7;
 	@FXML
 	Text nom8;
-	
-	@FXML
-	Text date1;
-	@FXML
-	Text date2;
-	@FXML
-	Text date3;
-	@FXML
-	Text date4;
-	@FXML
-	Text date5;
-	@FXML
-	Text date6;
-	@FXML
-	Text date7;
-	@FXML
-	Text date8;
 	
 	@FXML
 	Text Partie11;
@@ -331,327 +316,492 @@ public class BulletinEtudiantProfScreenController implements Initializable {
 		return result;
 	}
 	
+	public static void infoBox(String infoMessage, String headerText, String title){
+        Alert alert = new Alert(AlertType.CONFIRMATION);
+        alert.setContentText(infoMessage);
+        alert.setTitle(title);
+        alert.setHeaderText(headerText);
+        alert.showAndWait();
+    }
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-//		int idU = RésultatsEtudiantVueProfScreenController.idU();
-//		String notes = "SELECT NumPart,Notes,NumTOEIC,Date FROM Notes WHERE idUtilisateur = ? ORDER BY Date";	
-//		try {
-//			preparedStatement = connection.prepareStatement(notes);
-//			preparedStatement.setInt(1, idU);
-//			resultSet = preparedStatement.executeQuery();
-//			String nom = "SELECT LibelleTOEIC FROM Toeic WHERE NumTOEIC = ?";
-//			int numTOEIC = resultSet.getInt(3);
-//			preparedStatement = connection.prepareStatement(nom);
-//			preparedStatement.setInt(1, numTOEIC);
-//			ResultSet resultSet2 = preparedStatement.executeQuery();
-//			resultSet2.next();
-//
-//			for (int j = 2; j<=8; j++) {
-//				if(resultSet.next()) {
-//					if(numTOEIC == 1) {
-//						nom1.setText(resultSet2.getString(1));
-//						date1.setText(resultSet.getString(4));
-//						int noteO = 0;
-//						int noteE = 0;
-//						for (int i = 1; i<=7 ; i++) {
-//							if(resultSet.getInt(1) == 1) {
-//								Partie11.setText(Integer.toString(resultSet.getInt(2))+" / 6");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 2) {
-//								Partie21.setText(Integer.toString(resultSet.getInt(2))+" / 25");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 3) {
-//								Partie31.setText(Integer.toString(resultSet.getInt(2))+" / 39");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 4) {
-//								Partie41.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 5) {
-//								Partie51.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 6) {
-//								Partie61.setText(Integer.toString(resultSet.getInt(2))+" / 16");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 7) {
-//								Partie71.setText(Integer.toString(resultSet.getInt(2))+" / 54");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//						}
-//						Score1.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
-//					}
-//					if(numTOEIC == 2) {
-//						nom2.setText(resultSet2.getString(1));
-//						date2.setText(resultSet.getString(4));
-//						int noteO = 0;
-//						int noteE = 0;
-//						for (int i = 1; i<=7 ; i++) {
-//							if(resultSet.getInt(1) == 1) {
-//								Partie12.setText(Integer.toString(resultSet.getInt(2))+" / 6");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 2) {
-//								Partie22.setText(Integer.toString(resultSet.getInt(2))+" / 25");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 3) {
-//								Partie32.setText(Integer.toString(resultSet.getInt(2))+" / 39");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 4) {
-//								Partie42.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 5) {
-//								Partie52.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 6) {
-//								Partie62.setText(Integer.toString(resultSet.getInt(2))+" / 16");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 7) {
-//								Partie72.setText(Integer.toString(resultSet.getInt(2))+" / 54");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//						}
-//						Score2.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
-//					}
-//					if(numTOEIC == 3) {
-//						nom3.setText(resultSet2.getString(1));
-//						date3.setText(resultSet.getString(4));
-//						int noteO = 0;
-//						int noteE = 0;
-//						for (int i = 1; i<=7 ; i++) {
-//							if(resultSet.getInt(1) == 1) {
-//								Partie13.setText(Integer.toString(resultSet.getInt(2))+" / 6");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 2) {
-//								Partie23.setText(Integer.toString(resultSet.getInt(2))+" / 25");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 3) {
-//								Partie33.setText(Integer.toString(resultSet.getInt(2))+" / 39");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 4) {
-//								Partie43.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 5) {
-//								Partie53.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 6) {
-//								Partie63.setText(Integer.toString(resultSet.getInt(2))+" / 16");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 7) {
-//								Partie73.setText(Integer.toString(resultSet.getInt(2))+" / 54");
-//								noteE = noteE + resultSet.getInt(2);
-//							}	
-//						}
-//						Score3.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
-//					}
-//
-//					if(numTOEIC == 4) {
-//						nom4.setText(resultSet2.getString(1));
-//						date4.setText(resultSet.getString(4));
-//						int noteO = 0;
-//						int noteE = 0;
-//						for (int i = 1; i<=7 ; i++) {
-//							if(resultSet.getInt(1) == 1) {
-//								Partie14.setText(Integer.toString(resultSet.getInt(2))+" / 6");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 2) {
-//								Partie24.setText(Integer.toString(resultSet.getInt(2))+" / 25");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 3) {
-//								Partie34.setText(Integer.toString(resultSet.getInt(2))+" / 39");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 4) {
-//								Partie44.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 5) {
-//								Partie54.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 6) {
-//								Partie64.setText(Integer.toString(resultSet.getInt(2))+" / 16");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 7) {
-//								Partie74.setText(Integer.toString(resultSet.getInt(2))+" / 54");
-//								noteE = noteE + resultSet.getInt(2);
-//							}	
-//						}
-//						Score4.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
-//					}
-//					if(numTOEIC == 5) {
-//						nom5.setText(resultSet2.getString(1));
-//						date5.setText(resultSet.getString(4));
-//						int noteO = 0;
-//						int noteE = 0;
-//						for (int i = 1; i<=7 ; i++) {
-//							if(resultSet.getInt(1) == 1) {
-//								Partie15.setText(Integer.toString(resultSet.getInt(2))+" / 6");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 2) {
-//								Partie25.setText(Integer.toString(resultSet.getInt(2))+" / 25");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 3) {
-//								Partie35.setText(Integer.toString(resultSet.getInt(2))+" / 39");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 4) {
-//								Partie45.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 5) {
-//								Partie55.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 6) {
-//								Partie65.setText(Integer.toString(resultSet.getInt(2))+" / 16");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 7) {
-//								Partie75.setText(Integer.toString(resultSet.getInt(2))+" / 54");
-//								noteE = noteE + resultSet.getInt(2);
-//							}	
-//						}
-//						Score5.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
-//					}
-//					if(numTOEIC == 6) {
-//						nom6.setText(resultSet2.getString(1));
-//						date6.setText(resultSet.getString(4));
-//						int noteO = 0;
-//						int noteE = 0;
-//						for (int i = 1; i<=7 ; i++) {
-//							if(resultSet.getInt(1) == 1) {
-//								Partie16.setText(Integer.toString(resultSet.getInt(2))+" / 6");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 2) {
-//								Partie26.setText(Integer.toString(resultSet.getInt(2))+" / 25");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 3) {
-//								Partie36.setText(Integer.toString(resultSet.getInt(2))+" / 39");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 4) {
-//								Partie46.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 5) {
-//								Partie56.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 6) {
-//								Partie66.setText(Integer.toString(resultSet.getInt(2))+" / 16");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 7) {
-//								Partie76.setText(Integer.toString(resultSet.getInt(2))+" / 54");
-//								noteE = noteE + resultSet.getInt(2);
-//							}	
-//						}
-//						Score6.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
-//					}
-//					if(numTOEIC == 7) {
-//						nom7.setText(resultSet2.getString(1));
-//						date7.setText(resultSet.getString(4));
-//						int noteO = 0;
-//						int noteE = 0;
-//						for (int i = 1; i<=7 ; i++) {
-//							if(resultSet.getInt(1) == 1) {
-//								Partie17.setText(Integer.toString(resultSet.getInt(2))+" / 6");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 2) {
-//								Partie27.setText(Integer.toString(resultSet.getInt(2))+" / 25");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 3) {
-//								Partie37.setText(Integer.toString(resultSet.getInt(2))+" / 39");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 4) {
-//								Partie47.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 5) {
-//								Partie57.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 6) {
-//								Partie67.setText(Integer.toString(resultSet.getInt(2))+" / 16");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 7) {
-//								Partie77.setText(Integer.toString(resultSet.getInt(2))+" / 54");
-//								noteE = noteE + resultSet.getInt(2);
-//							}	
-//						}
-//						Score7.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
-//					}
-//					if(numTOEIC == 8) {
-//						nom8.setText(resultSet2.getString(1));
-//						date8.setText(resultSet.getString(4));
-//						int noteO = 0;
-//						int noteE = 0;
-//						for (int i = 1; i<=7 ; i++) {
-//							if(resultSet.getInt(1) == 1) {
-//								Partie18.setText(Integer.toString(resultSet.getInt(2))+" / 6");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 2) {
-//								Partie28.setText(Integer.toString(resultSet.getInt(2))+" / 25");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 3) {
-//								Partie38.setText(Integer.toString(resultSet.getInt(2))+" / 39");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 4) {
-//								Partie48.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteO = noteO + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 5) {
-//								Partie58.setText(Integer.toString(resultSet.getInt(2))+" / 30");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 6) {
-//								Partie68.setText(Integer.toString(resultSet.getInt(2))+" / 16");
-//								noteE = noteE + resultSet.getInt(2);
-//							}
-//							if(resultSet.getInt(1) == 7) {
-//								Partie78.setText(Integer.toString(resultSet.getInt(2))+" / 54");
-//								noteE = noteE + resultSet.getInt(2);
-//							}	
-//						}
-//						Score8.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
-//					}
-//				}
-//
-//			}
-//		}
-//	catch(Exception e){
-//			e.printStackTrace();
-//		}
+		int idU = RésultatsEtudiantVueProfScreenController.idU();
+		String exist = "SELECT COUNT(*) FROM Notes WHERE idUtilisateur = ?";
+		
+		try {
+			preparedStatement = connection.prepareStatement(exist);
+			preparedStatement.setInt(1, idU);
+			ResultSet resultSet1 = preparedStatement.executeQuery();
+			resultSet1.next();
+			
+			if(resultSet1.getInt(1) == 0) {
+				infoBox("Cet étudiant n'a pas encore passé de TOEIC, il n'y aura donc pas de résultats.", null, "Erreur");
+			}
+			else {
+				String notes = "SELECT NumPart,Notes,NumTOEIC FROM Notes WHERE idUtilisateur = ? ORDER BY Date";	
+				preparedStatement = connection.prepareStatement(notes);
+				preparedStatement.setInt(1, idU);
+				resultSet = preparedStatement.executeQuery();				
+
+				for (int j = 1 ; j<=8; j++) {
+					if(resultSet.next()) {
+						String note = "SELECT DISTINCT NumTOEIC FROM Notes WHERE idUtilisateur = ? ORDER BY Date";	
+						preparedStatement = connection.prepareStatement(note);
+						preparedStatement.setInt(1, idU);
+						resultSet = preparedStatement.executeQuery();			
+						if(resultSet.next()) {
+							if(j == 1) {
+								String nom = "SELECT LibelleTOEIC FROM Toeic WHERE NumTOEIC = ?";
+								int numTOEIC = resultSet.getInt(1);
+								preparedStatement = connection.prepareStatement(nom);
+								preparedStatement.setInt(1, numTOEIC);
+								ResultSet resultSet2 = preparedStatement.executeQuery();
+								resultSet2.next();
+								nom1.setText(resultSet2.getString(1));
+								int noteO = 0;
+								int noteE = 0;
+								String not = "SELECT NumPart,Notes FROM Notes WHERE NumTOEIC = ? AND idUtilisateur = ?";
+								preparedStatement = connection.prepareStatement(not);
+								preparedStatement.setInt(1, numTOEIC);
+								preparedStatement.setInt(2, idU);
+								ResultSet resultSetN = preparedStatement.executeQuery();
+								for (int i = 1; i<=7 ; i++) {
+									resultSetN.next();
+									if(resultSetN.getInt(1) == 1) {
+										Partie11.setText(Integer.toString(resultSetN.getInt(2))+" / 6");
+										noteO = noteO + resultSetN.getInt(2);
+									}
+									if(resultSetN.getInt(1) == 2) {
+										Partie21.setText(Integer.toString(resultSetN.getInt(2))+" / 25");
+										noteO = noteO + resultSetN.getInt(2);
+									}
+									if(resultSetN.getInt(1) == 3) {
+										Partie31.setText(Integer.toString(resultSetN.getInt(2))+" / 39");
+										noteO = noteO + resultSetN.getInt(2);
+									}
+									if(resultSetN.getInt(1) == 4) {
+										Partie41.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+										noteO = noteO + resultSetN.getInt(2);
+									}
+									if(resultSetN.getInt(1) == 5) {
+										Partie51.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+										noteE = noteE + resultSetN.getInt(2);
+									}
+									if(resultSetN.getInt(1) == 6) {
+										Partie61.setText(Integer.toString(resultSetN.getInt(2))+" / 16");
+										noteE = noteE + resultSetN.getInt(2);
+									}
+									if(resultSetN.getInt(1) == 7) {
+										Partie71.setText(Integer.toString(resultSetN.getInt(2))+" / 54");
+										noteE = noteE + resultSetN.getInt(2);
+									}
+								}						
+								Score1.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
+							}
+							if(j == 2) {
+								if(resultSet.next()) {
+									String nom = "SELECT LibelleTOEIC FROM Toeic WHERE NumTOEIC = ?";
+									int numTOEIC = resultSet.getInt(1);
+									preparedStatement = connection.prepareStatement(nom);
+									preparedStatement.setInt(1, numTOEIC);
+									ResultSet resultSet2 = preparedStatement.executeQuery();
+									resultSet2.next();
+									nom2.setText(resultSet2.getString(1));
+									int noteO = 0;
+									int noteE = 0;
+									String not = "SELECT NumPart,Notes FROM Notes WHERE NumTOEIC = ? AND idUtilisateur = ?";
+									preparedStatement = connection.prepareStatement(not);
+									preparedStatement.setInt(1, numTOEIC);
+									preparedStatement.setInt(2, idU);
+									ResultSet resultSetN = preparedStatement.executeQuery();							
+									for (int i = 1; i<=7 ; i++) {
+										resultSetN.next();
+										if(resultSetN.getInt(1) == 1) {
+											Partie12.setText(Integer.toString(resultSetN.getInt(2))+" / 6");
+											noteO = noteO + resultSetN.getInt(2);
+										}
+										if(resultSetN.getInt(1) == 2) {
+											Partie22.setText(Integer.toString(resultSetN.getInt(2))+" / 25");
+											noteO = noteO + resultSetN.getInt(2);
+										}
+										if(resultSetN.getInt(1) == 3) {
+											Partie32.setText(Integer.toString(resultSetN.getInt(2))+" / 39");
+											noteO = noteO + resultSetN.getInt(2);
+										}
+										if(resultSetN.getInt(1) == 4) {
+											Partie42.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+											noteO = noteO + resultSetN.getInt(2);
+										}
+										if(resultSetN.getInt(1) == 5) {
+											Partie52.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+											noteE = noteE + resultSetN.getInt(2);
+										}
+										if(resultSetN.getInt(1) == 6) {
+											Partie62.setText(Integer.toString(resultSetN.getInt(2))+" / 16");
+											noteE = noteE + resultSetN.getInt(2);
+										}
+										if(resultSetN.getInt(1) == 7) {
+											Partie72.setText(Integer.toString(resultSetN.getInt(2))+" / 54");
+											noteE = noteE + resultSetN.getInt(2);
+										}
+									}
+									Score2.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
+								}
+							}
+							if(j == 3) {
+								if(resultSet.next()) {
+									if(resultSet.next()) {
+										String nom = "SELECT LibelleTOEIC FROM Toeic WHERE NumTOEIC = ?";
+										int numTOEIC = resultSet.getInt(1);
+										preparedStatement = connection.prepareStatement(nom);
+										preparedStatement.setInt(1, numTOEIC);
+										ResultSet resultSet2 = preparedStatement.executeQuery();
+										resultSet2.next();
+										nom3.setText(resultSet2.getString(1));
+										int noteO = 0;
+										int noteE = 0;
+										String not = "SELECT NumPart,Notes FROM Notes WHERE NumTOEIC = ? AND idUtilisateur = ?";
+										preparedStatement = connection.prepareStatement(not);
+										preparedStatement.setInt(1, numTOEIC);
+										preparedStatement.setInt(2, idU);
+										ResultSet resultSetN = preparedStatement.executeQuery();
+										for (int i = 1; i<=7 ; i++) {
+											resultSetN.next();
+											if(resultSetN.getInt(1) == 1) {
+												Partie13.setText(Integer.toString(resultSetN.getInt(2))+" / 6");
+												noteO = noteO + resultSetN.getInt(2);	
+											}
+											if(resultSetN.getInt(1) == 2) {
+												Partie23.setText(Integer.toString(resultSetN.getInt(2))+" / 25");
+												noteO = noteO + resultSetN.getInt(2);
+											}
+											if(resultSetN.getInt(1) == 3) {
+												Partie33.setText(Integer.toString(resultSetN.getInt(2))+" / 39");
+												noteO = noteO + resultSetN.getInt(2);
+											}
+											if(resultSetN.getInt(1) == 4) {
+												Partie43.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+												noteO = noteO + resultSetN.getInt(2);
+											}
+											if(resultSetN.getInt(1) == 5) {
+												Partie53.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+												noteE = noteE + resultSet.getInt(2);
+											}
+											if(resultSetN.getInt(1) == 6) {
+												Partie63.setText(Integer.toString(resultSetN.getInt(2))+" / 16");
+												noteE = noteE + resultSetN.getInt(2);
+											}
+											if(resultSetN.getInt(1) == 7) {
+												Partie73.setText(Integer.toString(resultSetN.getInt(2))+" / 54");
+												noteE = noteE + resultSetN.getInt(2);
+											}	
+										}
+										Score3.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
+									}
+								}
+							}
+
+							if(j == 4) {
+								if(resultSet.next()){
+									if(resultSet.next()){
+										if(resultSet.next()){
+											String nom = "SELECT LibelleTOEIC FROM Toeic WHERE NumTOEIC = ?";
+											int numTOEIC = resultSet.getInt(1);
+											preparedStatement = connection.prepareStatement(nom);
+											preparedStatement.setInt(1, numTOEIC);
+											ResultSet resultSet2 = preparedStatement.executeQuery();
+											resultSet2.next();
+											nom4.setText(resultSet2.getString(1));
+											int noteO = 0;
+											int noteE = 0;
+											String not = "SELECT NumPart,Notes FROM Notes WHERE NumTOEIC = ? AND idUtilisateur = ?";
+											preparedStatement = connection.prepareStatement(not);
+											preparedStatement.setInt(1, numTOEIC);
+											preparedStatement.setInt(2, idU);
+											ResultSet resultSetN = preparedStatement.executeQuery();
+											for (int i = 1; i<=7 ; i++) {
+												resultSetN.next();
+												if(resultSetN.getInt(1) == 1) {
+													Partie14.setText(Integer.toString(resultSetN.getInt(2))+" / 6");
+													noteO = noteO + resultSetN.getInt(2);
+												}
+												if(resultSetN.getInt(1) == 2) {
+													Partie24.setText(Integer.toString(resultSetN.getInt(2))+" / 25");
+													noteO = noteO + resultSetN.getInt(2);
+												}
+												if(resultSetN.getInt(1) == 3) {
+													Partie34.setText(Integer.toString(resultSetN.getInt(2))+" / 39");
+													noteO = noteO + resultSetN.getInt(2);
+												}
+												if(resultSetN.getInt(1) == 4) {
+													Partie44.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+													noteO = noteO + resultSetN.getInt(2);
+												}
+												if(resultSetN.getInt(1) == 5) {
+													Partie54.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+													noteE = noteE + resultSetN.getInt(2);
+												}
+												if(resultSetN.getInt(1) == 6) {
+													Partie64.setText(Integer.toString(resultSetN.getInt(2))+" / 16");
+													noteE = noteE + resultSetN.getInt(2);
+												}
+												if(resultSetN.getInt(1) == 7) {
+													Partie74.setText(Integer.toString(resultSetN.getInt(2))+" / 54");
+													noteE = noteE + resultSetN.getInt(2);
+												}	
+											}
+											Score4.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
+										}
+									}
+								}
+							}
+
+							if(j == 5) {
+								if(resultSet.next()) {
+									if(resultSet.next()) {
+										if(resultSet.next()) {
+											if(resultSet.next()) {
+												String nom = "SELECT LibelleTOEIC FROM Toeic WHERE NumTOEIC = ?";
+												int numTOEIC = resultSet.getInt(1);
+												preparedStatement = connection.prepareStatement(nom);
+												preparedStatement.setInt(1, numTOEIC);
+												ResultSet resultSet2 = preparedStatement.executeQuery();
+												resultSet2.next();
+												nom5.setText(resultSet2.getString(1));
+												int noteO = 0;
+												int noteE = 0;
+												String not = "SELECT NumPart,Notes FROM Notes WHERE NumTOEIC = ? AND idUtilisateur = ?";
+												preparedStatement = connection.prepareStatement(not);
+												preparedStatement.setInt(1, numTOEIC);
+												preparedStatement.setInt(2, idU);
+												ResultSet resultSetN = preparedStatement.executeQuery();
+												for (int i = 1; i<=7 ; i++) {
+													resultSetN.next();
+													if(resultSetN.getInt(1) == 1) {
+														Partie15.setText(Integer.toString(resultSetN.getInt(2))+" / 6");
+														noteO = noteO + resultSetN.getInt(2);
+													}
+													if(resultSetN.getInt(1) == 2) {
+														Partie25.setText(Integer.toString(resultSetN.getInt(2))+" / 25");
+														noteO = noteO + resultSetN.getInt(2);
+													}
+													if(resultSetN.getInt(1) == 3) {
+														Partie35.setText(Integer.toString(resultSetN.getInt(2))+" / 39");
+														noteO = noteO + resultSetN.getInt(2);
+													}
+													if(resultSetN.getInt(1) == 4) {
+														Partie45.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+														noteO = noteO + resultSetN.getInt(2);
+													}
+													if(resultSetN.getInt(1) == 5) {
+														Partie55.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+														noteE = noteE + resultSetN.getInt(2);
+													}
+													if(resultSetN.getInt(1) == 6) {
+														Partie65.setText(Integer.toString(resultSetN.getInt(2))+" / 16");
+														noteE = noteE + resultSetN.getInt(2);
+													}
+													if(resultSetN.getInt(1) == 7) {
+														Partie75.setText(Integer.toString(resultSetN.getInt(2))+" / 54");
+														noteE = noteE + resultSetN.getInt(2);
+													}	
+												}
+												Score5.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
+											}
+										}
+									}
+								}
+							}
+							if(j == 6) {
+								if(resultSet.next()) {
+									if(resultSet.next()) {
+										if(resultSet.next()) {
+											if(resultSet.next()) {
+												if(resultSet.next()) {
+													String nom = "SELECT LibelleTOEIC FROM Toeic WHERE NumTOEIC = ?";
+													int numTOEIC = resultSet.getInt(1);
+													preparedStatement = connection.prepareStatement(nom);
+													preparedStatement.setInt(1, numTOEIC);
+													ResultSet resultSet2 = preparedStatement.executeQuery();
+													resultSet2.next();
+													nom6.setText(resultSet2.getString(1));
+													int noteO = 0;
+													int noteE = 0;
+													String not = "SELECT NumPart,Notes FROM Notes WHERE NumTOEIC = ? AND idUtilisateur = ?";
+													preparedStatement = connection.prepareStatement(not);
+													preparedStatement.setInt(1, numTOEIC);
+													preparedStatement.setInt(2, idU);
+													ResultSet resultSetN = preparedStatement.executeQuery();
+													for (int i = 1; i<=7 ; i++) {
+														resultSetN.next();
+														if(resultSetN.getInt(1) == 1) {
+															Partie16.setText(Integer.toString(resultSetN.getInt(2))+" / 6");
+															noteO = noteO + resultSetN.getInt(2);
+														}
+														if(resultSetN.getInt(1) == 2) {
+															Partie26.setText(Integer.toString(resultSetN.getInt(2))+" / 25");
+															noteO = noteO + resultSetN.getInt(2);
+														}
+														if(resultSetN.getInt(1) == 3) {
+															Partie36.setText(Integer.toString(resultSetN.getInt(2))+" / 39");
+															noteO = noteO + resultSetN.getInt(2);
+														}
+														if(resultSetN.getInt(1) == 4) {
+															Partie46.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+															noteO = noteO + resultSetN.getInt(2);
+														}
+														if(resultSetN.getInt(1) == 5) {
+															Partie56.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+															noteE = noteE + resultSetN.getInt(2);
+														}
+														if(resultSetN.getInt(1) == 6) {
+															Partie66.setText(Integer.toString(resultSetN.getInt(2))+" / 16");
+															noteE = noteE + resultSetN.getInt(2);
+														}
+														if(resultSetN.getInt(1) == 7) {
+															Partie76.setText(Integer.toString(resultSetN.getInt(2))+" / 54");
+															noteE = noteE + resultSetN.getInt(2);
+														}	
+													}
+													Score6.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
+												}
+											}
+										}
+									}
+								}
+							}
+							if(j == 7) {
+								if(resultSet.next()) {
+									if(resultSet.next()) {
+										if(resultSet.next()) {
+											if(resultSet.next()) {
+												if(resultSet.next()) {
+													if(resultSet.next()) {
+														String nom = "SELECT LibelleTOEIC FROM Toeic WHERE NumTOEIC = ?";
+														int numTOEIC = resultSet.getInt(1);
+														preparedStatement = connection.prepareStatement(nom);
+														preparedStatement.setInt(1, numTOEIC);
+														ResultSet resultSet2 = preparedStatement.executeQuery();
+														resultSet2.next();
+														nom7.setText(resultSet2.getString(1));
+														int noteO = 0;
+														int noteE = 0;
+														String not = "SELECT NumPart,Notes FROM Notes WHERE NumTOEIC = ? AND idUtilisateur = ?";
+														preparedStatement = connection.prepareStatement(not);
+														preparedStatement.setInt(1, numTOEIC);
+														preparedStatement.setInt(2, idU);
+														ResultSet resultSetN = preparedStatement.executeQuery();
+														for (int i = 1; i<=7 ; i++) {
+															resultSetN.next();
+															if(resultSetN.getInt(1) == 1) {
+																Partie17.setText(Integer.toString(resultSetN.getInt(2))+" / 6");
+																noteO = noteO + resultSetN.getInt(2);
+															}
+															if(resultSetN.getInt(1) == 2) {
+																Partie27.setText(Integer.toString(resultSetN.getInt(2))+" / 25");
+																noteO = noteO + resultSetN.getInt(2);
+															}
+															if(resultSetN.getInt(1) == 3) {
+																Partie37.setText(Integer.toString(resultSetN.getInt(2))+" / 39");
+																noteO = noteO + resultSetN.getInt(2);
+															}
+															if(resultSetN.getInt(1) == 4) {
+																Partie47.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+																noteO = noteO + resultSetN.getInt(2);
+															}
+															if(resultSetN.getInt(1) == 5) {
+																Partie57.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+																noteE = noteE + resultSetN.getInt(2);
+															}
+															if(resultSetN.getInt(1) == 6) {
+																Partie67.setText(Integer.toString(resultSetN.getInt(2))+" / 16");
+																noteE = noteE + resultSetN.getInt(2);
+															}
+															if(resultSetN.getInt(1) == 7) {
+																Partie77.setText(Integer.toString(resultSetN.getInt(2))+" / 54");
+																noteE = noteE + resultSetN.getInt(2);
+															}	
+														}
+														Score7.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
+													}
+												}
+											}
+										}
+									}
+								}
+
+							}
+							if(j == 8) {
+								if(resultSet.next()) {
+									if(resultSet.next()) {
+										if(resultSet.next()) {
+											if(resultSet.next()) {
+												if(resultSet.next()) {
+													if(resultSet.next()) {
+														if(resultSet.next()) {
+															String nom = "SELECT LibelleTOEIC FROM Toeic WHERE NumTOEIC = ?";
+															int numTOEIC = resultSet.getInt(1);
+															preparedStatement = connection.prepareStatement(nom);
+															preparedStatement.setInt(1, numTOEIC);
+															ResultSet resultSet2 = preparedStatement.executeQuery();
+															resultSet2.next();
+															nom8.setText(resultSet2.getString(1));
+															int noteO = 0;
+															int noteE = 0;
+															String not = "SELECT NumPart,Notes FROM Notes WHERE NumTOEIC = ? AND idUtilisateur = ?";
+															preparedStatement = connection.prepareStatement(not);
+															preparedStatement.setInt(1, numTOEIC);
+															preparedStatement.setInt(2, idU);
+															ResultSet resultSetN = preparedStatement.executeQuery();
+															for (int i = 1; i<=7 ; i++) {
+																resultSetN.next();
+																if(resultSetN.getInt(1) == 1) {
+																	Partie18.setText(Integer.toString(resultSetN.getInt(2))+" / 6");
+																	noteO = noteO + resultSetN.getInt(2);
+																}
+																if(resultSetN.getInt(1) == 2) {
+																	Partie28.setText(Integer.toString(resultSetN.getInt(2))+" / 25");
+																	noteO = noteO + resultSetN.getInt(2);
+																}
+																if(resultSetN.getInt(1) == 3) {
+																	Partie38.setText(Integer.toString(resultSetN.getInt(2))+" / 39");
+																	noteO = noteO + resultSetN.getInt(2);
+																}
+																if(resultSetN.getInt(1) == 4) {
+																	Partie48.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+																	noteO = noteO + resultSetN.getInt(2);
+																}
+																if(resultSetN.getInt(1) == 5) {
+																	Partie58.setText(Integer.toString(resultSetN.getInt(2))+" / 30");
+																	noteE = noteE + resultSetN.getInt(2);
+																}
+																if(resultSetN.getInt(1) == 6) {
+																	Partie68.setText(Integer.toString(resultSetN.getInt(2))+" / 16");
+																	noteE = noteE + resultSetN.getInt(2);
+																}
+																if(resultSetN.getInt(1) == 7) {
+																	Partie78.setText(Integer.toString(resultSetN.getInt(2))+" / 54");
+																	noteE = noteE + resultSetN.getInt(2);
+																}	
+															}
+															Score8.setText(Integer.toString(noteE(noteE) + noteO(noteO)) + " / 990");
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}		
+				}
+			}
+		}
+	catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -133,7 +133,8 @@ public class RésultatsEtudiantVueProfScreenController implements Initializable {
 				            	if(resultSet.getInt(1) == 0) {
 				            		infoBox("Il n'existe pas d'étudiant ayant ces informations, veuillez réessayer.", null,"Erreur");
 				            	}
-				            	else {     
+				            	else {
+				            		idU = resultSet.getInt(2);
 				            		Node node = (Node)event.getSource();
 				        			dialogStage = (Stage) node.getScene().getWindow();
 				        			dialogStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("../../../../../src/layout/Enseignant/Statistiques/BulletinEtudiantProfScreen.fxml")));
