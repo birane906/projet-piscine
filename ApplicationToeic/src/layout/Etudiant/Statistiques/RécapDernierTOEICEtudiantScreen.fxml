@@ -71,7 +71,7 @@
                                           <Font size="25.0" />
                                        </font>
                                     </Text>
-                                    <Text fx:id="ScoreOr" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="118.6708984375">
+                                    <Text fx:id="ScoreOr" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="160.6708984375">
                                        <font>
                                           <Font size="25.0" />
                                        </font>
@@ -79,7 +79,7 @@
                                           <Insets left="5.0" />
                                        </HBox.margin>
                                     </Text>
-                                    <Text fx:id="ScoreOral" fill="WHITE" layoutX="232.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="118.6708984375">
+                                    <Text fx:id="ScoreOral" fill="WHITE" layoutX="232.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="170.6708984375">
                                        <font>
                                           <Font size="25.0" />
                                        </font>
@@ -180,7 +180,7 @@
                                           <Font size="25.0" />
                                        </font>
                                     </Text>
-                                    <Text fx:id="ScoreEcr" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="118.6708984375">
+                                    <Text fx:id="ScoreEcr" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="160.6708984375">
                                        <font>
                                           <Font size="25.0" />
                                        </font>
@@ -188,7 +188,7 @@
                                           <Insets left="5.0" />
                                        </HBox.margin>
                                     </Text>
-                                    <Text fx:id="ScoreEcrit" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="118.6708984375">
+                                    <Text fx:id="ScoreEcrit" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="170.6708984375">
                                        <font>
                                           <Font size="25.0" />
                                        </font>

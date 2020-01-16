@@ -78,14 +78,8 @@ Stage dialogStage = new Stage();
 				resultSet = preparedStatement.executeQuery();
 				if (resultSet.next()) {
 					int numTOEIC = resultSet.getInt(1);
-					
-					String del = "DELETE FROM Notes WHERE NumTOEIC = ?";
-					
-					preparedStatement = connection.prepareStatement(del);
-					preparedStatement.setInt(1, numTOEIC);
-					preparedStatement.executeUpdate();
-					
-					del = "DELETE FROM Question WHERE NumTOEIC = ?";
+										
+					String del = "DELETE FROM Question WHERE NumTOEIC = ?";
 					
 					preparedStatement = connection.prepareStatement(del);
 					preparedStatement.setInt(1, numTOEIC);
